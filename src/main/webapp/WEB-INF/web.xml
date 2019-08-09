@@ -45,7 +45,7 @@
 
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
-    <url-pattern>/signIn</url-pattern>
+    <url-pattern>/client</url-pattern>
   </filter-mapping>
 
 

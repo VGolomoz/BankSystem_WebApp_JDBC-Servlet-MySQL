@@ -24,18 +24,17 @@ public class LoginFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession(false);
-        String loginURI = request.getContextPath() + "/signIn";
-        System.out.println("Message from Filter: " + loginURI);
+        String loginURI = "/client";
 
         boolean loggedIn = session != null && session.getAttribute("user") != null;
-        boolean loginRequest = request.getRequestURI().equals(loginURI);
+       /* boolean loginRequest = request.getRequestURI().equals(loginURI);*/
 
-        if (loggedIn || loginRequest) {
+        if (loggedIn) {
             LOG.info("User is logged in, continue request");
             filterChain.doFilter(request, response);
         } else {
             LOG.info("Not logged in, show error page");
-            response.sendRedirect(loginURI);
+            response.sendRedirect("/signIn");
         }
     }
 

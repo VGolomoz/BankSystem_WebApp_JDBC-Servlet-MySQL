@@ -9087,3 +9087,109 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key '
 2019-08-09 14:06:50 INFO  ClientServlet:17 - ClientServlet call doGet() method
 2019-08-09 14:09:13 INFO  ClientServlet:17 - ClientServlet call doGet() method
 2019-08-09 14:09:53 INFO  ClientServlet:17 - ClientServlet call doGet() method
+2019-08-09 16:23:12 INFO  ClientServlet:17 - ClientServlet call doGet() method
+2019-08-09 16:24:15 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:15 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:15 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:24:15 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:15 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:15 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:24:15 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:36 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:36 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-09 16:24:36 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-09 16:24:36 DEBUG DBCPDataSource:33 - Connection received 34305387, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-09 16:24:36 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-09 16:24:36 INFO  SignInCommand:33 - Unknown login, try again
+2019-08-09 16:24:36 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:36 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:36 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:36 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:24:36 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:36 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:24:36 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:42 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:42 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:24:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:24:42 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:24:42 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:26:02 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:26:03 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:26:03 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:26:43 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:26:43 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:28:36 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:28:36 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:28:36 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:28:36 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:28:36 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:28:36 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:27 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:35:42 INFO  LoginFilter:37 - Not logged in, show error page
+2019-08-09 16:36:53 INFO  LoginFilter:34 - User is logged in, continue request
+2019-08-09 16:36:53 INFO  ClientServlet:17 - ClientServlet call doGet() method
+2019-08-09 16:38:06 INFO  LoginFilter:36 - Not logged in, show error page
+2019-08-09 16:38:06 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:38:15 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-09 16:38:15 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-09 16:38:16 DEBUG DBCPDataSource:33 - Connection received 1623597284, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-09 16:38:16 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-09 16:38:16 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-09 16:38:16 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-09 16:38:16 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-09 16:38:16 DEBUG UserJDBC:81 - Executed queryREAD_BY_ID
+2019-08-09 16:38:16 DEBUG UserJDBC:83 - Check is ResultSet has next
+2019-08-09 16:38:16 INFO  SignInCommand:29 - Sign In Succesfull
+2019-08-09 16:38:19 INFO  LoginFilter:33 - User is logged in, continue request
+2019-08-09 16:38:19 INFO  ClientServlet:17 - ClientServlet call doGet() method
+2019-08-09 16:38:42 INFO  LoginFilter:36 - Not logged in, show error page
+2019-08-09 16:38:42 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-09 16:38:53 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-09 16:38:53 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-09 16:38:53 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-09 16:38:53 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-09 16:38:53 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-09 16:38:53 DEBUG UserJDBC:81 - Executed queryREAD_BY_ID
+2019-08-09 16:38:53 DEBUG UserJDBC:83 - Check is ResultSet has next
+2019-08-09 16:38:53 INFO  SignInCommand:29 - Sign In Succesfull
