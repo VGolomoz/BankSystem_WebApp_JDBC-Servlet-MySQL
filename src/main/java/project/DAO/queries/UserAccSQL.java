@@ -12,6 +12,11 @@ public enum UserAccSQL {
     READ_BY_ID("SELECT * FROM `" + UserAccFields.USER_ACC + "` " +
                         "WHERE `" + UserAccFields.USER_ID + "` =(?)"),
 
+    UPDATE_DEPOSIT_STATUS_BY_ID ( "UPDATE `" + UserAccFields.USER_ACC + "` " +
+            "SET `" + UserAccFields.DEPOSIT + "` = (1)" +
+            "WHERE `" + UserAccFields.USER_ID + "` =(?)"),
+
+
     DELETE(""),
     UPDATE("");
 

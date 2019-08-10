@@ -21,7 +21,7 @@
                     <h2>Registration</h2>
                 </div>
 
-<form method="post"  class="w3-selection w3-light-grey w3-padding">
+<form method="post" class="w3-selection w3-light-grey w3-padding">
     <label>Enter your mail:
         <input type="text" name="mail" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
     </label>
@@ -43,7 +43,7 @@
     </label>
 
     <label>Enter your mobile phone:
-            <input type="text" name="mobile_phone" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <input type="float" name="mobile_phone" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
     </label>
 
     <label>Enter your birtday:

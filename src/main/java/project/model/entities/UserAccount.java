@@ -7,7 +7,6 @@ import java.util.Objects;
 
 public class UserAccount extends Account{
 
-    private int roleId;
     private Date validity;
     private Boolean deposit;
     private Boolean credit;
@@ -17,14 +16,6 @@ public class UserAccount extends Account{
         this.currency = CurrencyType.UAH.getTitle();
         this.deposit = false;
         this.credit = false;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
     }
 
     public Date getValidity() {
@@ -57,22 +48,20 @@ public class UserAccount extends Account{
         if (!(o instanceof UserAccount)) return false;
         if (!super.equals(o)) return false;
         UserAccount that = (UserAccount) o;
-        return roleId == that.roleId &&
-                validity.equals(that.validity) &&
+        return Objects.equals(validity, that.validity) &&
                 deposit.equals(that.deposit) &&
                 credit.equals(that.credit);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), roleId, validity, deposit, credit);
+        return Objects.hash(super.hashCode(), validity, deposit, credit);
     }
 
     @Override
     public String toString() {
         return "UserAccount{" +
-                "roleId=" + roleId +
-                ", validity=" + validity +
+                "validity=" + validity +
                 ", deposit=" + deposit +
                 ", credit=" + credit +
                 ", userId=" + userId +

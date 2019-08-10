@@ -21,6 +21,6 @@ public class ClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("ClientServlet call doPost() method");
-        super.doPost(request, response);
+        request.getRequestDispatcher("views/client.jsp").forward(request, response);
     }
 }

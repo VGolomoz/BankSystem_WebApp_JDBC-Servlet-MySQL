@@ -5,12 +5,12 @@ CREATE TABLE users (
 user_id int NOT NULL AUTO_INCREMENT,
 mail varchar(255) NOT NULL UNIQUE,
 `password` varchar(255) NOT NULL,
+`role` varchar(255) NOT NULL,
 PRIMARY KEY(user_id)
 );
 
 CREATE TABLE user_account (
 user_id int NOT NULL UNIQUE,
-role_id int NOT NULL DEFAULT '2',
 balance FLOAT NOT NULL,
 currency VARCHAR(255) NOT NULL,
 validity DATE NOT NULL,
@@ -24,7 +24,7 @@ user_id int NOT NULL,
 `name` VARCHAR(255) NOT NULL,
 lastName VARCHAR(255) NOT NULL,
 address VARCHAR(255),
-mobile_phone VARCHAR(255) NOT NULL,
+mobilePhone VARCHAR(255) NOT NULL,
 mail varchar(255) NOT NULL UNIQUE,
 birthday DATE NOT NULL,
 PRIMARY KEY(user_id)
@@ -47,12 +47,6 @@ currency VARCHAR(255) NOT NULL,
 rate FLOAT NOT NULL,
 accrued_interest FLOAT NOT NULL,
 PRIMARY KEY(user_id)
-);
-
-CREATE TABLE roles (
-role_id int NOT NULL AUTO_INCREMENT,
-role_type VARCHAR(255) NOT NULL UNIQUE,
-PRIMARY KEY (role_id)
 );
 
 CREATE TABLE op_credit_proof (

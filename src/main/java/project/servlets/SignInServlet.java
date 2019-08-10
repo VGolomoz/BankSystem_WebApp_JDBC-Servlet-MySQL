@@ -25,7 +25,8 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("SignInServlet call doPost() method");
-
-        request.getRequestDispatcher(new SignInCommand(new UserService()).execute(request, response)).forward(request, response);
+        String path = new SignInCommand(new UserService()).execute(request, response);
+        /*response.sendRedirect(path);*/
+        request.getRequestDispatcher(path).forward(request, response);
     }
 }

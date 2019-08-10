@@ -8,6 +8,7 @@ public class DepositAccount extends Account {
     private float rate;
     private Date term;
 
+
     public float getRate() {
         return rate;
     }

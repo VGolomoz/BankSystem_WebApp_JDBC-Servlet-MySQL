@@ -83,6 +83,17 @@ public class UserAccJDBC implements UserAccDAO {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void updateDepositStatusById(int id) {
+        try (PreparedStatement ps = connection.prepareStatement(UserAccSQL.UPDATE_DEPOSIT_STATUS_BY_ID.getQUERY())) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            LOG.debug("Executed query" + UserAccSQL.UPDATE_DEPOSIT_STATUS_BY_ID);
+        } catch (SQLException e) {
+            LOG.error("SQLException occurred in UserAccJDBC.class from updateDepositStatusById() method", e);
+        }
+    }
 }
 
 

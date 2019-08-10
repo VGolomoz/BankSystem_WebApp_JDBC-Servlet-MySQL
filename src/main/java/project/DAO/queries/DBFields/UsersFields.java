@@ -6,4 +6,5 @@ public interface UsersFields {
     String USER_ID = "user_Id";
     String MAIL = "mail";
     String PASS = "password";
+    String ROLE = "role";
 }

@@ -23,6 +23,12 @@
     <servlet-class>project.servlets.ClientServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>Deposit</servlet-name>
+    <servlet-class>project.servlets.DepositServlet</servlet-class>
+  </servlet>
+
+
   <servlet-mapping>
     <servlet-name>Registration</servlet-name>
     <url-pattern>/registration</url-pattern>
@@ -38,6 +44,11 @@
     <url-pattern>/client</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>Deposit</servlet-name>
+    <url-pattern>/open_deposit</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>LoginFilter</filter-name>
     <filter-class>project.servlets.filters.LoginFilter</filter-class>
@@ -47,6 +58,5 @@
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/client</url-pattern>
   </filter-mapping>
-
 
 </web-app>

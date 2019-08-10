@@ -63,6 +63,7 @@ public class UserJDBC implements UserDAO {
             LOG.debug("Executed query" + UserSQL.INSERT_TO_USERS_TABLE);
             ps.setString(1, user.getMail());
             ps.setString(2, user.getPass());
+            ps.setString(3, user.getRole());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in UserJDBC.class from create() method", e);

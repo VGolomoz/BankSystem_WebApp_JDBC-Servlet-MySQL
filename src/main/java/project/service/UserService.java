@@ -10,14 +10,12 @@ import project.model.entities.User;
 import project.model.entities.UserAccount;
 
 
-
-
 public class UserService {
 
     private FactoryDAO factoryDAO = FactoryDAO.getInstance();
     private static final Logger LOG = Logger.getLogger(UserService.class);
 
-    public User checkIsUserExist (String mail) {
+    public User getUserIfExist(String mail) {
         User user;
         UserDAO dao = factoryDAO.createUserDAO();
         if (dao.isUserExists(mail)) {
@@ -26,7 +24,6 @@ public class UserService {
         }
         else return null;
     }
-
 
     public void createUserInDatabase(User user) {
 
@@ -45,5 +42,16 @@ public class UserService {
         dao.create(contactDetails);
     }
 
+    public UserAccount getUserAccountFromDB (User user){
+        UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
+        UserAccount userAccount = userAccDAO.getById(user.getUserId());
+        return userAccount;
+    }
+
+    public ContactDetails getContactDetailsFromDB (User user){
+        ContactDetailsDAO contactDetailsDAO = factoryDAO.createContactDetailsDAO();
+        ContactDetails contactDetails = contactDetailsDAO.getById(user.getUserId());
+        return contactDetails;
+    }
 }
 

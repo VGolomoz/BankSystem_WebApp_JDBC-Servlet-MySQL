@@ -9,7 +9,7 @@ public class ContactDetails {
     private String name;
     private String lastName;
     private String address;
-    private String mobile_phone;
+    private String mobilePhone;
     private String mail;
     private Date birthday;
 
@@ -45,12 +45,12 @@ public class ContactDetails {
         this.address = address;
     }
 
-    public String getMobile_phone() {
-        return mobile_phone;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setMobile_phone(String mobile_phone) {
-        this.mobile_phone = mobile_phone;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
     public String getMail() {
@@ -78,14 +78,14 @@ public class ContactDetails {
                 name.equals(that.name) &&
                 lastName.equals(that.lastName) &&
                 Objects.equals(address, that.address) &&
-                mobile_phone.equals(that.mobile_phone) &&
+                mobilePhone.equals(that.mobilePhone) &&
                 mail.equals(that.mail) &&
                 birthday.equals(that.birthday);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, name, lastName, address, mobile_phone, mail, birthday);
+        return Objects.hash(userId, name, lastName, address, mobilePhone, mail, birthday);
     }
 
     @Override
@@ -95,7 +95,7 @@ public class ContactDetails {
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
-                ", mobile_phone='" + mobile_phone + '\'' +
+                ", mobilePhone='" + mobilePhone + '\'' +
                 ", mail='" + mail + '\'' +
                 ", birthday=" + birthday +
                 '}';

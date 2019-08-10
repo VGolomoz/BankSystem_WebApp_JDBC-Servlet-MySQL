@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<%@ page import="project.model.entities.User" %>
+<%@ page import="project.model.entities.UserAccount" %>
+<%@ page import="project.model.entities.ContactDetails" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <title>Client Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,44 +16,49 @@
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">UA</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">EN</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">RU</a>
-        <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Deposit Account</a>
+        <a href="/open_deposit" class="w3-bar-item w3-button w3-border w3-light-grey">Deposit Account</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">My Operations</a>
     </div>
-
 </div>
 
 <div class="w3-row-padding w3-padding-64 w3-container">
    <div class="w3-third">
    <img src="/avatar.png" style="width:30%">
 
-  <h2></h2>
-  <table class="w3-table w3-striped w3-bordered w3-border">
-  <thead class="w3-teal"><th style="width:40%">Account Information</th><th></th></thead>
-  <tr><td>Balance</td><td>TBD</td></tr>
-  <tr><td>Currency</td><td>TBD</td></tr>
-  <tr><td>Validity</td><td>TBD</td></tr>
-  <tr><td>Deposit</td><td>TBD</td></tr>
-  <tr><td>Credit</td><td>TBD</td></tr>
-  </table>
+   <% UserAccount userAccount = (UserAccount) request.getSession().getAttribute("userAccount");
+      ContactDetails contactDetails = (ContactDetails) request.getSession().getAttribute("contactDetails");
+   %>
 
-  <h2></h2>
-  <table class="w3-table w3-striped w3-bordered w3-border">
-  <thead class="w3-teal"><th style="width:40%">Contact Details</th><th></th></thead>
-  <tr><td>Name</td><td>TBD</td></tr>
-  <tr><td>Last Name</td><td>TBD</td></tr>
-  <tr><td>Address</td><td>TBD</td></tr>
-  <tr><td>Mobile Phone</td><td>TBD</td></tr>
-  <tr><td>Mail</td><td>TBD</td></tr>
-  <tr><td>Birthday</td><td>TBD</td></tr>
-  </table>
+    <h2><%out.println(contactDetails.getName()+ " Main Account");%></h2>
 
+
+<%out.println (" <table class=\"w3-table w3-striped w3-bordered w3-border\"> " +
+             " <thead class=\"w3-teal\"> " +
+             " <th style=\"width:50%\"> " + "Account Information" +
+             " </th><th></th></thead> " +
+             " <tr><td>Balance</td><td>"+userAccount.getBalance()+"</td></tr> " +
+             " <tr><td>Currency</td><td>"+userAccount.getCurrency()+"</td></tr> " +
+             " <tr><td>Validity</td><td>"+userAccount.getValidity()+"</td></tr></table>");
+            %>
   <h2></h2>
-  <table class="w3-table w3-striped w3-bordered w3-border">
-  <thead class="w3-teal"><th style="width:30%">Operation history</th><th></th></thead>
-  <tr><td>TBD</td><td>TBD</td></tr>
-   </table>
-</div>
+
+  <% out.println(" <table class=\"w3-table w3-striped w3-bordered w3-border\"> " +
+                 " <thead class=\"w3-teal\"><th style=\"width:50%\">Contact Details</th><th></th></thead> " +
+                 " <tr><td>Name</td><td>"+contactDetails.getName()+"</td></tr> " +
+                 " <tr><td>Last Name</td><td>"+contactDetails.getLastName()+"</td></tr> " +
+                 " <tr><td>Address</td><td>"+contactDetails.getAddress()+"</td></tr> " +
+                 " <tr><td>Mobile Phone</td><td>"+contactDetails.getMobilePhone()+"</td></tr> " +
+                 " <tr><td>Mail</td><td>"+contactDetails.getMail()+"</td></tr> " +
+                 " <tr><td>Birthday</td><td>"+contactDetails.getBirthday()+"</td></tr></table>");
+   %>
+  <h2></h2>
+
+  <% out.println(" <table class=\"w3-table w3-striped w3-bordered w3-border\"> " +
+                   " <thead class=\"w3-teal\"><th style=\"width:50%\">Operations history</th><th></th></thead> " +
+                   " <tr><td>TBD</td><td>TBD</td></tr></table>");
+   %>
+ </div>
 
 
 </div>

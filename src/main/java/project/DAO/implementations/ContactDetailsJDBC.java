@@ -32,7 +32,7 @@ public class ContactDetailsJDBC implements ContactDetailsDAO {
             ps.setString(3, entity.getLastName());
             ps.setString(4, entity.getAddress());
             ps.setString(5, entity.getMail());
-            ps.setString(6, entity.getMobile_phone());
+            ps.setString(6, entity.getMobilePhone());
             ps.setDate(7, entity.getBirthday());
             ps.executeUpdate();
         } catch (SQLException e) {

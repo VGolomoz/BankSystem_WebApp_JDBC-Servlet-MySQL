@@ -11,7 +11,7 @@ public class RegistrUserCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        LOGGER.info("Registration page");
+        LOGGER.info("Open Registration page");
         return "views/registration.jsp";
     }
 }

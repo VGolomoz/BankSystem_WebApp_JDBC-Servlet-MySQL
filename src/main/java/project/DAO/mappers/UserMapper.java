@@ -14,6 +14,7 @@ public class UserMapper implements Mapper<User> {
         User user = new User();
         user.setUserId(resultSet.getInt(UsersFields.USER_ID));
         user.setMail(resultSet.getString(UsersFields.MAIL));
+        user.setRole(resultSet.getString(UsersFields.ROLE));
 
         return user;
     }

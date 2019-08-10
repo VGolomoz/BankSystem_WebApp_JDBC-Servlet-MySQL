@@ -41,12 +41,13 @@ public class RegistrationCommand implements Command {
         contactDetails.setName(request.getParameter("name"));
         contactDetails.setLastName(request.getParameter("lastname"));
         contactDetails.setAddress(request.getParameter("address"));
-        contactDetails.setMobile_phone(request.getParameter("mobile_phone"));
+        contactDetails.setMobilePhone(request.getParameter("mobile_phone"));
         contactDetails.setBirthday(Date.valueOf(request.getParameter("birthday")));
         userService.createContactDetailsInDatabase(contactDetails);
 
+        request.setAttribute("userName", contactDetails.getName() + " registration is done");
 
         LOGGER.info("return SignIn page");
-        return "views/signIn.jsp";
+        return "/signIn";
     }
 }

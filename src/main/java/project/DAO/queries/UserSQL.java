@@ -9,7 +9,7 @@ public enum UserSQL {
     READ_ALL("SELECT * FROM `" + UsersFields.USERS + "` "),
 
     INSERT_TO_USERS_TABLE("INSERT INTO `" + UsersFields.USERS +
-            "`(`" + UsersFields.MAIL + "`, `" + UsersFields.PASS + "`) VALUES ((?),(?))"),
+            "`(`" + UsersFields.MAIL + "`, `" + UsersFields.PASS + "`, `" + UsersFields.ROLE + "`) VALUES ((?),(?),(?))"),
 
     READ_BY_MAIL("SELECT * FROM `" + UsersFields.USERS +
             "` WHERE `" + UsersFields.MAIL + "` =(?)"),

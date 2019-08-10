@@ -16,7 +16,8 @@ public class ContactDetailsMapper implements Mapper<ContactDetails> {
         contactDetails.setName(resultSet.getString(ContactDetailsFields.USER_NAME));
         contactDetails.setLastName(resultSet.getString(ContactDetailsFields.USER_LASTNAME));
         contactDetails.setAddress(resultSet.getString(ContactDetailsFields.ADDRESS));
-        contactDetails.setMobile_phone(resultSet.getString(ContactDetailsFields.MOB_PHONE));
+        contactDetails.setMobilePhone(resultSet.getString(ContactDetailsFields.MOB_PHONE));
+        contactDetails.setMail(resultSet.getString(ContactDetailsFields.MAIL));
         contactDetails.setBirthday(resultSet.getDate(ContactDetailsFields.BIRTHDAY));
 
         return contactDetails;

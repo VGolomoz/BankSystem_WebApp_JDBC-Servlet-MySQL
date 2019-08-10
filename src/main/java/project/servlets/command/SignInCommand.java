@@ -21,13 +21,17 @@ public class SignInCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-        String command = "/views/error_page.jsp";
+        String command = "/views/signIn.jsp";
         String mail = request.getParameter("mail");
-        User user = userService.checkIsUserExist(mail);
+        User user = userService.getUserIfExist(mail);
 
         if (user != null) {
+
             LOG.info("Sign In Succesfull");
-            request.getSession().setAttribute("user", user);
+            request.getSession().setAttribute("loginedUser", user);
+            request.getSession().setAttribute("userAccount", userService.getUserAccountFromDB(user));
+            request.getSession().setAttribute("contactDetails", userService.getContactDetailsFromDB(user));
+
             command = "/views/client.jsp";
         } else {
             LOG.info("Unknown login, try again");
