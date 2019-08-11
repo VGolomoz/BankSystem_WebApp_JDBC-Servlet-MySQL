@@ -7,7 +7,7 @@ public interface ContactDetailsFields {
     String USER_NAME = "name";
     String USER_LASTNAME = "lastName";
     String ADDRESS = "address";
-    String MOB_PHONE = "mobile_phone";
+    String MOB_PHONE = "mobilePhone";
     String MAIL = "mail";
     String BIRTHDAY = "birthday";
 }

@@ -28,6 +28,11 @@
     <servlet-class>project.servlets.DepositServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>Operations</servlet-name>
+    <servlet-class>project.servlets.OperationsServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>Registration</servlet-name>
@@ -47,6 +52,11 @@
   <servlet-mapping>
     <servlet-name>Deposit</servlet-name>
     <url-pattern>/open_deposit</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Operations</servlet-name>
+    <url-pattern>/operations</url-pattern>
   </servlet-mapping>
 
   <filter>

@@ -6,4 +6,6 @@ public interface UserAccDAO extends DAO<UserAccount> {
 
    void updateDepositStatusById(int id);
 
+   void updateBalanceById (int id, float amount);
+
 }

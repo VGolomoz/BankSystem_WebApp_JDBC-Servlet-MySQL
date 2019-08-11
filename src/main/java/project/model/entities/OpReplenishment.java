@@ -5,7 +5,7 @@ import java.util.Objects;
 public class OpReplenishment extends Operation{
 
     private float amount;
-    private String acc_name;
+    private String accName;
 
     public float getAmount() {
         return amount;
@@ -15,12 +15,12 @@ public class OpReplenishment extends Operation{
         this.amount = amount;
     }
 
-    public String getAcc_name() {
-        return acc_name;
+    public String getAccName() {
+        return accName;
     }
 
-    public void setAcc_name(String acc_name) {
-        this.acc_name = acc_name;
+    public void setAccName(String accName) {
+        this.accName = accName;
     }
 
     @Override
@@ -30,19 +30,19 @@ public class OpReplenishment extends Operation{
         if (!super.equals(o)) return false;
         OpReplenishment that = (OpReplenishment) o;
         return Float.compare(that.amount, amount) == 0 &&
-                acc_name.equals(that.acc_name);
+                accName.equals(that.accName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), amount, acc_name);
+        return Objects.hash(super.hashCode(), amount, accName);
     }
 
     @Override
     public String toString() {
         return "OpReplenishment{" +
                 "amount=" + amount +
-                ", acc_name='" + acc_name + '\'' +
+                ", accName='" + accName + '\'' +
                 ", userId=" + userId +
                 ", operationDate=" + operationDate +
                 '}';

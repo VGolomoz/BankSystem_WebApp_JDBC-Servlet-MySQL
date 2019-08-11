@@ -33,7 +33,6 @@ public class DepositCommand implements Command {
             user = (User) request.getSession().getAttribute("loginedUser");
             depositAccount = depositService.getDepositAccountFromDB(user);
             request.setAttribute("depositAccount", depositAccount);
-            System.out.println(depositAccount.toString());
             command = "/views/deposit.jsp";
         } else {
             LOG.info("Deposit account not exist, go to Open Deposit page");

@@ -15,7 +15,7 @@ public class OpTransferMapper implements Mapper<OpTransfer> {
         OpTransfer opTransfer = new OpTransfer();
 
         opTransfer.setUserId(resultSet.getInt(OpTransferFields.SENDER_ID));
-        opTransfer.setRecipientId(resultSet.getInt(OpTransferFields.RECIPIENT_ID));
+        opTransfer.setRecipientMail(resultSet.getString(OpTransferFields.RECIPIENT__MAIL));
         opTransfer.setAmount(resultSet.getFloat(OpTransferFields.AMOUNT));
         opTransfer.setOperationDate(resultSet.getDate(OpTransferFields.OPERATION_DATE));
 

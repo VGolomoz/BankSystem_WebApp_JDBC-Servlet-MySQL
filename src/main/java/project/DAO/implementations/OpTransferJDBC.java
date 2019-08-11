@@ -50,9 +50,8 @@ public class OpTransferJDBC implements OpTransferDAO {
     public void create(OpTransfer entity) {
         try (PreparedStatement ps = connection.prepareStatement(OpTransferSQL.INSERT_TO_OP_TRANSFER_TABLE.getQUERY())) {
             ps.setInt(1, entity.getUserId());
-            ps.setInt(2, entity.getRecipientId());
+            ps.setString(2, entity.getRecipientMail());
             ps.setFloat(3, entity.getAmount());
-            ps.setDate(4, entity.getOperationDate());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in OpTransferJDBC.class from create() method", e);

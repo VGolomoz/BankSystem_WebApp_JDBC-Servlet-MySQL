@@ -47,8 +47,7 @@ public class OpReplenishmentJDBC implements OpReplenishmentDAO {
         try(PreparedStatement ps = connection.prepareStatement(OpReplenishmentSQL.INSERT_TO_OP_REPLENISHMENT_TABLE.getQUERY())) {
             ps.setInt(1, entity.getUserId());
             ps.setFloat(2, entity.getAmount());
-            ps.setString(3, entity.getAcc_name());
-            ps.setDate(4, entity.getOperationDate());
+            ps.setString(3, entity.getAccName());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in OpReplenishmentJDBC.class from create() method", e);

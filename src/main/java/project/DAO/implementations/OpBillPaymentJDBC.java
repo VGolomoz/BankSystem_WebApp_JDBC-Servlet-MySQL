@@ -8,6 +8,7 @@ import project.DAO.queries.OpBillPaymentSQL;
 import project.model.entities.OpBillPayment;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +54,6 @@ public class OpBillPaymentJDBC implements OpBillPaymentDAO {
             ps.setString(2, entity.getBillNumber());
             ps.setString(3, entity.getPurpose());
             ps.setFloat(4, entity.getAmount());
-            ps.setDate(5, entity.getOperationDate());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in OpBillPaymentJDBC.class from create() method", e);

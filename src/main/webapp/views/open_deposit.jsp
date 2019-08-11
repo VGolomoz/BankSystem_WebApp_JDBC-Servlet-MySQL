@@ -14,7 +14,7 @@
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">RU</a>
         <a href="/open_deposit" class="w3-bar-item w3-button w3-border w3-light-grey">Deposit Account</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
-        <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">My Operations</a>
+        <a href="/operations" class="w3-bar-item w3-button w3-border w3-light-grey">My Operations</a>
     </div>
 </div>
 <br>

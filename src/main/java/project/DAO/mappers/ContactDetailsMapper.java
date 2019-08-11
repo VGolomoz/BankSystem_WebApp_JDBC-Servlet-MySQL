@@ -13,6 +13,7 @@ public class ContactDetailsMapper implements Mapper<ContactDetails> {
     public ContactDetails getEntity(ResultSet resultSet) throws SQLException {
         ContactDetails contactDetails = new ContactDetails();
 
+        contactDetails.setUserId(resultSet.getInt(ContactDetailsFields.USER_ID));
         contactDetails.setName(resultSet.getString(ContactDetailsFields.USER_NAME));
         contactDetails.setLastName(resultSet.getString(ContactDetailsFields.USER_LASTNAME));
         contactDetails.setAddress(resultSet.getString(ContactDetailsFields.ADDRESS));

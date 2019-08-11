@@ -16,6 +16,10 @@ public enum UserAccSQL {
             "SET `" + UserAccFields.DEPOSIT + "` = (1)" +
             "WHERE `" + UserAccFields.USER_ID + "` =(?)"),
 
+    UPDATE_BALANCE_BY_ID ( "UPDATE `" + UserAccFields.USER_ACC + "` " +
+            "SET `" + UserAccFields.BALANCE + "` = (?)" +
+            "WHERE `" + UserAccFields.USER_ID + "` =(?)"),
+
 
     DELETE(""),
     UPDATE("");

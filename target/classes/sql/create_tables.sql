@@ -62,24 +62,21 @@ user_id int NOT NULL,
 bill_number VARCHAR(255) NOT NULL,
 purpose VARCHAR(255) NOT NULL,
 amount FLOAT NOT NULL,
-`date` DATETIME NOT NULL,
-PRIMARY KEY (user_id)
+`date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE op_transfer (
 sender_id int NOT NULL,
-recipient_id int NOT NULL,
+recipient_mail VARCHAR(255) NOT NULL,
 amount FLOAT NOT NULL,
-`date` DATETIME NOT NULL,
-PRIMARY KEY(sender_id)
+`date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE op_replenishment (
 user_id int NOT NULL,
 amount FLOAT NOT NULL,
-acc_name VARCHAR(255) NOT NULL,
-`date` DATETIME NOT NULL,
-PRIMARY KEY(user_id)
+accName VARCHAR(255) NOT NULL,
+`date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 ALTER TABLE `user_account` ADD CONSTRAINT `user_account_fk0`
@@ -97,11 +94,5 @@ FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);
 ALTER TABLE `op_credit_proof` ADD CONSTRAINT `op_credit_proof_fk0`
 FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);
 
-ALTER TABLE `op_bill_payment` ADD CONSTRAINT `op_bill_payment_fk0`
-FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);
 
-ALTER TABLE `op_transfer` ADD CONSTRAINT `op_transfer_fk0`
-FOREIGN KEY (`sender_id`) REFERENCES `users`(`user_id`);
 
-ALTER TABLE `op_replenishment` ADD CONSTRAINT `op_replenishment_fk0`
-FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);

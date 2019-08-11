@@ -16,7 +16,7 @@ public class OpReplenishmentMapper implements Mapper<OpReplenishment> {
 
         opReplenishment.setUserId(resultSet.getInt(OpReplenishmentFields.USER_ID));
         opReplenishment.setAmount(resultSet.getFloat(OpReplenishmentFields.AMOUNT));
-        opReplenishment.setAcc_name(resultSet.getString(OpReplenishmentFields.ACC_NAME));
+        opReplenishment.setAccName(resultSet.getString(OpReplenishmentFields.ACC_NAME));
         opReplenishment.setOperationDate(resultSet.getDate(OpReplenishmentFields.OPERATION_DATE));
 
         return opReplenishment;

@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class OpTransfer extends Operation {
 
-    private int recipientId;
+    private String recipientMail;
     private float amount;
 
-    public int getRecipientId() {
-        return recipientId;
+    public String getRecipientMail() {
+        return recipientMail;
     }
 
-    public void setRecipientId(int recipientId) {
-        this.recipientId = recipientId;
+    public void setRecipientMail(String recipientMail) {
+        this.recipientMail = recipientMail;
     }
 
     public float getAmount() {
@@ -29,19 +29,19 @@ public class OpTransfer extends Operation {
         if (!(o instanceof OpTransfer)) return false;
         if (!super.equals(o)) return false;
         OpTransfer that = (OpTransfer) o;
-        return recipientId == that.recipientId &&
-                Float.compare(that.amount, amount) == 0;
+        return Float.compare(that.amount, amount) == 0 &&
+                recipientMail.equals(that.recipientMail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), recipientId, amount);
+        return Objects.hash(super.hashCode(), recipientMail, amount);
     }
 
     @Override
     public String toString() {
         return "OpTransfer{" +
-                "recipientId=" + recipientId +
+                "recipientMail='" + recipientMail + '\'' +
                 ", amount=" + amount +
                 ", userId=" + userId +
                 ", operationDate=" + operationDate +
