@@ -16943,3 +16943,129 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2019-08-11 23:18:37 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
 2019-08-11 23:18:37 DEBUG UserJDBC:52 - Check is ResultSet has next
 2019-08-11 23:18:37 INFO  OpTransferCommand:82 - Check User Account Balance for enough money
+2019-08-12 21:13:00 INFO  LoginFilter:34 - Not logged in, redirect to Sign In page
+2019-08-12 21:13:00 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-12 21:13:04 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-12 21:13:04 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-12 21:13:04 DEBUG DBCPDataSource:33 - Connection received 1323731547, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-12 21:13:04 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-12 21:13:04 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-12 21:13:04 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-12 21:13:04 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-12 21:13:04 DEBUG UserJDBC:82 - Executed queryREAD_BY_ID
+2019-08-12 21:13:04 DEBUG UserJDBC:84 - Check is ResultSet has next
+2019-08-12 21:13:04 INFO  SignInCommand:30 - Sign In Succesfull
+2019-08-12 21:13:04 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:13:04 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:13:04 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-12 21:13:04 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-12 21:13:09 INFO  OperationsServlet:19 - OperationsServlet call doGet() method
+2019-08-12 21:13:38 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:13:38 INFO  OpBillPaymentCommand:50 - There is not Operation Bill Payment, try next
+2019-08-12 21:13:38 INFO  OpTransferCommand:53 - There is not Operation Bill Payment, try next
+2019-08-12 21:13:38 DEBUG OpTransferCommand:56 - Not supporting payment operation from TransferCommand.class in makePayment() method
+2019-08-12 21:15:25 INFO  LoginFilter:34 - Not logged in, redirect to Sign In page
+2019-08-12 21:15:25 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-12 21:15:28 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-12 21:15:28 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-12 21:15:29 DEBUG DBCPDataSource:33 - Connection received 1272782447, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-12 21:15:29 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-12 21:15:29 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-12 21:15:29 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-12 21:15:29 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-12 21:15:29 DEBUG UserJDBC:82 - Executed queryREAD_BY_ID
+2019-08-12 21:15:29 DEBUG UserJDBC:84 - Check is ResultSet has next
+2019-08-12 21:15:29 INFO  SignInCommand:30 - Sign In Succesfull
+2019-08-12 21:15:29 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:15:29 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:15:29 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-12 21:15:29 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-12 21:15:31 INFO  OperationsServlet:19 - OperationsServlet call doGet() method
+2019-08-12 21:15:38 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:15:38 INFO  OpBillPaymentCommand:50 - There is not Operation Bill Payment, try next
+2019-08-12 21:15:38 INFO  OpTransferCommand:53 - There is not Operation Bill Payment, try next
+2019-08-12 21:15:38 DEBUG OpTransferCommand:56 - Not supporting payment operation from TransferCommand.class in makePayment() method
+2019-08-12 21:16:41 INFO  LoginFilter:34 - Not logged in, redirect to Sign In page
+2019-08-12 21:16:41 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-12 21:16:45 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-12 21:16:45 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-12 21:16:46 DEBUG DBCPDataSource:33 - Connection received 883303261, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-12 21:16:46 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-12 21:16:46 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-12 21:16:46 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-12 21:16:46 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-12 21:16:46 DEBUG UserJDBC:82 - Executed queryREAD_BY_ID
+2019-08-12 21:16:46 DEBUG UserJDBC:84 - Check is ResultSet has next
+2019-08-12 21:16:46 INFO  SignInCommand:30 - Sign In Succesfull
+2019-08-12 21:16:46 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:16:46 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:16:46 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-12 21:16:46 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-12 21:16:47 INFO  OperationsServlet:19 - OperationsServlet call doGet() method
+2019-08-12 21:16:54 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:16:54 INFO  OpReplMainAccCommand:32 - There is Operation Replenishment Main Account Balance started
+2019-08-12 21:16:54 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:16:54 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:16:54 INFO  OpReplMainAccCommand:59 - Try to update Main User Account Balance
+2019-08-12 21:16:54 DEBUG UserJDBC:104 - Executed queryUPDATE_BALANCE_BY_ID
+2019-08-12 21:16:54 INFO  OpReplMainAccCommand:62 - Main User Account Balance updated
+2019-08-12 21:17:41 INFO  DepositServlet:21 - DepositServlet call doGet() method
+2019-08-12 21:17:41 INFO  DepositCommand:32 - Deposit Account exist, get it from DB
+2019-08-12 21:17:41 DEBUG DepositAccJDBC:49 - Executed queryREAD_BY_ID
+2019-08-12 21:17:41 DEBUG DepositAccJDBC:51 - Check is ResultSet has next
+2019-08-12 21:17:43 INFO  LoginFilter:31 - User is logged in, continue request
+2019-08-12 21:17:43 INFO  ClientServlet:17 - ClientServlet call doGet() method
+2019-08-12 21:18:09 INFO  OperationsServlet:19 - OperationsServlet call doGet() method
+2019-08-12 21:18:16 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:18:16 INFO  OpReplMainAccCommand:40 - There is not Replenishment Main Account Payment, try next
+2019-08-12 21:18:16 INFO  OpBillPaymentCommand:50 - There is not Operation Bill Payment, try next
+2019-08-12 21:18:16 INFO  OpTransferCommand:36 - There is Operation Transfer started
+2019-08-12 21:18:16 INFO  OpTransferCommand:70 - Check if recipient Account exist
+2019-08-12 21:18:16 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-12 21:18:16 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-12 21:18:16 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-12 21:18:16 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-12 21:18:16 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:18:16 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:18:16 INFO  OpTransferCommand:82 - Check User Account Balance for enough money
+2019-08-12 21:18:16 DEBUG UserJDBC:104 - Executed queryUPDATE_BALANCE_BY_ID
+2019-08-12 21:18:16 INFO  OpTransferCommand:86 - User Account Balance updated
+2019-08-12 21:18:16 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:18:16 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:18:16 DEBUG UserJDBC:104 - Executed queryUPDATE_BALANCE_BY_ID
+2019-08-12 21:18:16 INFO  OpTransferCommand:91 - Recipient Account Balance updated
+2019-08-12 21:18:16 INFO  OpTransferCommand:104 - Operation Transfer added to operation history
+2019-08-12 21:19:07 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:19:07 INFO  OpReplMainAccCommand:40 - There is not Replenishment Main Account Payment, try next
+2019-08-12 21:19:07 INFO  OpBillPaymentCommand:35 - There is Operation Bill Payment started
+2019-08-12 21:19:07 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:19:07 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:19:07 INFO  OpBillPaymentCommand:69 - Check User Account Balance for enough money
+2019-08-12 21:19:07 DEBUG UserJDBC:104 - Executed queryUPDATE_BALANCE_BY_ID
+2019-08-12 21:19:07 INFO  OpBillPaymentCommand:73 - User Account Balance updated
+2019-08-12 21:19:07 DEBUG OpBillPaymentJDBC:52 - Executed queryINSERT_TO_OP_BILLPAYMENT_TABLE
+2019-08-12 21:19:07 INFO  OpBillPaymentCommand:87 - Operation Bill Payment added to operation history
+2019-08-12 21:47:52 INFO  LoginFilter:34 - Not logged in, redirect to Sign In page
+2019-08-12 21:47:52 INFO  SignInServlet:21 - SignInServlet call doGet() method
+2019-08-12 21:47:55 INFO  SignInServlet:27 - SignInServlet call doPost() method
+2019-08-12 21:47:55 DEBUG FactoryDAO:36 - Creating  FactoryDAO
+2019-08-12 21:47:55 DEBUG DBCPDataSource:33 - Connection received 1461388066, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-12 21:47:55 DEBUG UserJDBC:31 - Executed queryREAD_BY_MAIL
+2019-08-12 21:47:55 DEBUG UserJDBC:33 - Check is ResultSet has next
+2019-08-12 21:47:55 DEBUG UserJDBC:48 - Executed queryREAD_ID_BY_MAIL
+2019-08-12 21:47:55 DEBUG UserJDBC:50 - Check is ResultSet has next
+2019-08-12 21:47:55 DEBUG UserJDBC:82 - Executed queryREAD_BY_ID
+2019-08-12 21:47:55 DEBUG UserJDBC:84 - Check is ResultSet has next
+2019-08-12 21:47:55 INFO  SignInCommand:30 - Sign In Succesfull
+2019-08-12 21:47:55 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:47:55 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:47:55 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-12 21:47:55 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-12 21:47:57 INFO  OperationsServlet:19 - OperationsServlet call doGet() method
+2019-08-12 21:48:33 INFO  OperationsServlet:25 - OperationsServlet call doPost() method
+2019-08-12 21:48:33 INFO  OpReplMainAccCommand:34 - There is Operation Replenishment Main Account Balance started
+2019-08-12 21:48:33 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-12 21:48:33 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-12 21:48:33 INFO  OpReplMainAccCommand:61 - Try to update Main User Account Balance
+2019-08-12 21:48:33 DEBUG UserJDBC:104 - Executed queryUPDATE_BALANCE_BY_ID
+2019-08-12 21:48:33 INFO  OpReplMainAccCommand:64 - Main User Account Balance updated

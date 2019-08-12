@@ -51,6 +51,7 @@ C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\service\pay
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\service\paymentCommand\OpTransferCommand.java
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\model\entities\Operation.java
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\DAO\queries\UserAccSQL.java
+C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\service\paymentCommand\OpReplMainAccCommand.java
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\DAO\interfaces\OpReplenishmentDAO.java
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\util\DBConfig.java
 C:\Users\РС\IdeaProjects\Bank_System_project\src\main\java\project\DAO\implementations\FactoryJDBC.java
