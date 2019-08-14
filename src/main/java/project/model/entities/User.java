@@ -9,10 +9,10 @@ public class User {
     private int userId;
     private String mail;
     private String pass;
-    private String role;
+    private int roleId;
 
     public User() {
-        this.role = Role.CLIENT.getTitle();
+        this.roleId = Role.CLIENT.getRoleId();
     }
 
     public int getUserId() {
@@ -39,12 +39,12 @@ public class User {
         this.pass = pass;
     }
 
-    public String getRole() {
-        return role;
+    public int getRoleId() {
+        return roleId;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     @Override
@@ -53,14 +53,14 @@ public class User {
         if (!(o instanceof User)) return false;
         User user = (User) o;
         return userId == user.userId &&
+                roleId == user.roleId &&
                 mail.equals(user.mail) &&
-                pass.equals(user.pass) &&
-                role.equals(user.role);
+                pass.equals(user.pass);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, mail, pass, role);
+        return Objects.hash(userId, mail, pass, roleId);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class User {
                 "userId=" + userId +
                 ", mail='" + mail + '\'' +
                 ", pass='" + pass + '\'' +
-                ", role='" + role + '\'' +
+                ", roleId=" + roleId +
                 '}';
     }
 }

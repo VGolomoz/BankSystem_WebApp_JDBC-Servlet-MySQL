@@ -1,17 +1,17 @@
 package project.model.enums;
 
 public enum Role {
-    ADMIN("ADMIN"),
-    MANAGER("MANAGER"),
-    CLIENT("CLIENT");
+    ADMIN(1),
+    MANAGER(2),
+    CLIENT(3);
 
-    String title;
+    int roleId;
 
-    Role(String title) {
-        this.title = title;
+    Role(int roleId) {
+        this.roleId = roleId;
     }
 
-    public String getTitle() {
-        return title;
+    public int getRoleId() {
+        return roleId;
     }
 }

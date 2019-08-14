@@ -27,7 +27,9 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("RegistrationServlet call doPost() method");
-        request.getRequestDispatcher(new RegistrationCommand(new UserService()).execute(request, response)).forward(request, response);
+        String path = new RegistrationCommand(new UserService()).execute(request, response);
+        /*request.getRequestDispatcher(path).forward(request, response);*/
+        response.sendRedirect(path);
     }
 
 

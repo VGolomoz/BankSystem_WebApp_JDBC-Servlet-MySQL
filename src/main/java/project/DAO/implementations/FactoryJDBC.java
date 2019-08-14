@@ -52,6 +52,6 @@ public class FactoryJDBC extends FactoryDAO {
 
     @Override
     public OpReplenishmentDAO createOpReplenishmentDAO() {
-        return new OpReplenishmentJDBC();
+        return new OpReplenishmentJDBC(connection);
     }
 }

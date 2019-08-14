@@ -5,7 +5,7 @@ CREATE TABLE users (
 user_id int NOT NULL AUTO_INCREMENT,
 mail varchar(255) NOT NULL UNIQUE,
 `password` varchar(255) NOT NULL,
-`role` varchar(255) NOT NULL,
+`role` int NOT NULL,
 PRIMARY KEY(user_id)
 );
 

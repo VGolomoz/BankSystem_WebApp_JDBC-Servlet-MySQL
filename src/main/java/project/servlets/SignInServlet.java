@@ -19,14 +19,14 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("SignInServlet call doGet() method");
-        request.getRequestDispatcher("views/signIn.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/signIn.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("SignInServlet call doPost() method");
         String path = new SignInCommand(new UserService()).execute(request, response);
-        /*response.sendRedirect(path);*/
-        request.getRequestDispatcher(path).forward(request, response);
+        if (path.equals("/home.jsp")) response.sendRedirect(path);
+        else request.getRequestDispatcher(path).forward(request, response);
     }
 }

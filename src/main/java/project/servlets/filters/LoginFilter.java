@@ -1,7 +1,7 @@
 package project.servlets.filters;
 
-
 import org.apache.log4j.Logger;
+import project.model.enums.Role;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -11,8 +11,7 @@ import java.io.IOException;
 
 public class LoginFilter implements Filter {
 
-    private final Logger LOG = Logger.getLogger(LoginFilter.class);
-
+    private final Logger LOGGER = Logger.getLogger(LoginFilter.class);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -21,18 +20,31 @@ public class LoginFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(true);
 
-        boolean loggedIn = session != null && session.getAttribute("loginedUser") != null;
 
-        if (loggedIn) {
-            LOG.info("User is logged in, continue request");
-            filterChain.doFilter(request, response);
+        LOGGER.info("Check session");
+        if (session.getAttribute("userId") != null) {
+            LOGGER.info("User is logined");
+            int roleId = (Integer) request.getSession().getAttribute("roleId");
+            if (roleId == Role.CLIENT.getRoleId()) {
+                LOGGER.info("Role - Client, go to client page");
+                request.getRequestDispatcher("/client").forward(request, response);
+            } else if (roleId == Role.MANAGER.getRoleId()) {
+                LOGGER.info("Role - Manager, go to manager page");
+                request.getRequestDispatcher("/manager").forward(request, response);
+                filterChain.doFilter(request, response);
+            } else if (roleId == Role.ADMIN.getRoleId()){
+                LOGGER.info("Role - Admin, go to admin page");
+                request.getRequestDispatcher("/admin").forward(request, response);
+                filterChain.doFilter(request, response);
+            }
         } else {
-            LOG.info("Not logged in, redirect to Sign In page");
-            response.sendRedirect("/signIn");
+            LOGGER.info("Not logged in,continue");
+            filterChain.doFilter(request, response);
         }
     }
 

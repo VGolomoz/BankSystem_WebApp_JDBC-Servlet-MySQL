@@ -6,8 +6,7 @@ public enum OpReplenishmentSQL {
 
     INSERT_TO_OP_REPLENISHMENT_TABLE("INSERT INTO `" + OpReplenishmentFields.OP_REPLENISHMENT  +
             "`(`" + OpReplenishmentFields.USER_ID + "`, `" + OpReplenishmentFields.AMOUNT + "`, " +
-            "`" + OpReplenishmentFields.ACC_NAME + "`,`" + OpReplenishmentFields.OPERATION_DATE + "`," +
-            "VALUES ((?),(?),(?),(?))"),
+            "`" + OpReplenishmentFields.ACC_NAME + "`) VALUES ((?),(?),(?))"),
 
     GET_ALL_BY_ID("SELECT * FROM `" + OpReplenishmentFields.OP_REPLENISHMENT + "` " +
             "WHERE `" + OpReplenishmentFields.USER_ID + "` =(?)"),

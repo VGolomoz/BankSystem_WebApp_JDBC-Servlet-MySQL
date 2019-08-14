@@ -7,6 +7,7 @@ import project.DAO.mappers.Mapper;
 import project.DAO.queries.DBFields.UsersFields;
 import project.DAO.queries.UserSQL;
 import project.model.entities.User;
+import project.util.MyExceptions.WrongPasswordException;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -58,12 +59,33 @@ public class UserJDBC implements UserDAO {
     }
 
     @Override
+    public User getUserByMailAndPass(String mail, String pass) throws WrongPasswordException {
+        Mapper<User> userMapper = new UserMapper();
+        User result = null;
+
+        try (PreparedStatement ps = connection.prepareStatement(UserSQL.READ_BY_MAIL_AND_PASS.getQUERY())) {
+            ps.setString(1, mail);
+            ps.setString(2, pass);
+            final ResultSet rs = ps.executeQuery();
+            LOG.debug("Executed query" + UserSQL.READ_BY_MAIL_AND_PASS);
+            if (rs.next()) {
+                LOG.debug("Check is ResultSet has next");
+                result = userMapper.getEntity(rs);
+            }
+        } catch (SQLException e) {
+            LOG.error("SQLException occurred in UserJDBC.class from getUserByMailAndPass() method", e);
+        }
+        if (result == null) throw new WrongPasswordException("Wrong password");
+        else return result;
+    }
+
+    @Override
     public void create(User user) {
         try (PreparedStatement ps = connection.prepareStatement(UserSQL.INSERT_TO_USERS_TABLE.getQUERY())) {
             LOG.debug("Executed query" + UserSQL.INSERT_TO_USERS_TABLE);
             ps.setString(1, user.getMail());
             ps.setString(2, user.getPass());
-            ps.setString(3, user.getRole());
+            ps.setInt(3, user.getRoleId());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in UserJDBC.class from create() method", e);

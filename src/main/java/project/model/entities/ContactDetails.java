@@ -90,7 +90,7 @@ public class ContactDetails {
 
     @Override
     public String toString() {
-        return "ContactDetailsDAO{" +
+        return "ContactDetails{" +
                 "userId=" + userId +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +

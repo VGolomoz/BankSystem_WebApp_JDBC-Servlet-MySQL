@@ -19,6 +19,10 @@ public class OpReplenishmentJDBC implements OpReplenishmentDAO {
     private static final Logger LOG = Logger.getLogger(OpReplenishmentJDBC.class);
     private Connection connection;
 
+    public OpReplenishmentJDBC(Connection connection) {
+        this.connection = connection;
+    }
+
     @Override
     public List<OpReplenishment> getAllById(int id) {
 
@@ -43,7 +47,6 @@ public class OpReplenishmentJDBC implements OpReplenishmentDAO {
 
     @Override
     public void create(OpReplenishment entity) {
-
         try(PreparedStatement ps = connection.prepareStatement(OpReplenishmentSQL.INSERT_TO_OP_REPLENISHMENT_TABLE.getQUERY())) {
             ps.setInt(1, entity.getUserId());
             ps.setFloat(2, entity.getAmount());

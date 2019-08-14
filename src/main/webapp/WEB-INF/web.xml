@@ -5,7 +5,7 @@
 <web-app>
 
   <welcome-file-list>
-    <welcome-file>/index.html</welcome-file>
+    <welcome-file>/home.html</welcome-file>
   </welcome-file-list>
 
     <servlet>
@@ -31,6 +31,11 @@
   <servlet>
     <servlet-name>Operations</servlet-name>
     <servlet-class>project.servlets.OperationsServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>project.servlets.HomeServlet</servlet-class>
   </servlet>
 
 
@@ -59,6 +64,11 @@
     <url-pattern>/operations</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>LoginFilter</filter-name>
     <filter-class>project.servlets.filters.LoginFilter</filter-class>
@@ -66,7 +76,7 @@
 
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
-    <url-pattern>/client</url-pattern>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
 
 </web-app>

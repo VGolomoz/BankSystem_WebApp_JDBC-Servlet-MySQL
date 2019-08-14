@@ -66,12 +66,11 @@ public class OpReplMainAccCommand implements PaymentCommand {
         }
 
     private void addToOperationHistory(User user,float amount) {
+        OpReplenishmentDAO opReplenishmentDAO = factoryDAO.createOpReplenishmentDAO();
         OpReplenishment opReplenishment = new OpReplenishment();
         opReplenishment.setUserId(user.getUserId());
         opReplenishment.setAccName("MainAcc");
         opReplenishment.setAmount(amount);
-
-        OpReplenishmentDAO opReplenishmentDAO = factoryDAO.createOpReplenishmentDAO();
         opReplenishmentDAO.create(opReplenishment);
         LOGGER.info("Operation Replenishment Main Account added to operation history");
     }

@@ -6,7 +6,7 @@
 <html>
 <title>Client Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="styles/w3.css">
 <body>
 
 
@@ -26,8 +26,8 @@
    <div class="w3-third">
    <img src="/avatar.png" style="width:30%">
 
-   <% UserAccount userAccount = (UserAccount) request.getSession().getAttribute("userAccount");
-      ContactDetails contactDetails = (ContactDetails) request.getSession().getAttribute("contactDetails");
+   <% UserAccount userAccount = (UserAccount) request.getAttribute("userAccount");
+      ContactDetails contactDetails = (ContactDetails) request.getAttribute("contactDetails");
    %>
 
     <h2><%out.println(contactDetails.getName()+ " Main Account");%></h2>

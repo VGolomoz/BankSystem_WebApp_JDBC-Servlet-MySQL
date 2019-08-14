@@ -8,6 +8,7 @@ import project.DAO.interfaces.UserDAO;
 import project.model.entities.ContactDetails;
 import project.model.entities.User;
 import project.model.entities.UserAccount;
+import project.util.MyExceptions.WrongPasswordException;
 
 
 public class UserService {
@@ -15,14 +16,28 @@ public class UserService {
     private FactoryDAO factoryDAO = FactoryDAO.getInstance();
     private static final Logger LOG = Logger.getLogger(UserService.class);
 
-    public User getUserIfExist(String mail) {
-        User user;
+    public boolean isUserExist(String mail) {
         UserDAO dao = factoryDAO.createUserDAO();
-        if (dao.isUserExists(mail)) {
-           user = dao.getById(dao.getUserIdByMail(mail));
-          return user;
-        }
-        else return null;
+        if (dao.isUserExists(mail)) return true;
+        else return false;
+    }
+
+    public User getUser(String mail, String pass) throws WrongPasswordException {
+
+        UserDAO dao = factoryDAO.createUserDAO();
+        return dao.getUserByMailAndPass(mail, pass);
+    }
+
+    public UserAccount getUserAccountFromDB (int id){
+        UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
+        UserAccount userAccount = userAccDAO.getById(id);
+        return userAccount;
+    }
+
+    public ContactDetails getContactDetailsFromDB (int id){
+        ContactDetailsDAO contactDetailsDAO = factoryDAO.createContactDetailsDAO();
+        ContactDetails contactDetails = contactDetailsDAO.getById(id);
+        return contactDetails;
     }
 
     public void createUserInDatabase(User user) {
@@ -42,16 +57,6 @@ public class UserService {
         dao.create(contactDetails);
     }
 
-    public UserAccount getUserAccountFromDB (User user){
-        UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
-        UserAccount userAccount = userAccDAO.getById(user.getUserId());
-        return userAccount;
-    }
 
-    public ContactDetails getContactDetailsFromDB (User user){
-        ContactDetailsDAO contactDetailsDAO = factoryDAO.createContactDetailsDAO();
-        ContactDetails contactDetails = contactDetailsDAO.getById(user.getUserId());
-        return contactDetails;
-    }
 }
 
