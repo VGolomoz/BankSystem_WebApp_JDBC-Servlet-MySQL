@@ -5,7 +5,7 @@ import project.DAO.interfaces.CreditAccDAO;
 import project.DAO.mappers.CreditAccMapper;
 import project.DAO.mappers.Mapper;
 import project.DAO.queries.CreditAccSQL;
-import project.model.entities.CreditAccount;
+import project.model.CreditAccount;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

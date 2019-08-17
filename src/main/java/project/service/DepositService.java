@@ -4,8 +4,7 @@ import org.apache.log4j.Logger;
 import project.DAO.interfaces.DepositAccDAO;
 import project.DAO.interfaces.FactoryDAO;
 import project.DAO.interfaces.UserAccDAO;
-import project.model.entities.DepositAccount;
-import project.model.entities.User;
+import project.model.DepositAccount;
 
 public class DepositService {
 
@@ -18,14 +17,14 @@ public class DepositService {
         depositAccDAO.create(depositAccount);
     }
 
-    public DepositAccount getDepositAccountFromDB (User user){
+    public DepositAccount getDepositAccountFromDB (int id){
         DepositAccDAO depositAccDAO = factoryDAO.createDepositAccDAO();
-        DepositAccount depositAccount = depositAccDAO.getById(user.getUserId());
+        DepositAccount depositAccount = depositAccDAO.getById(id);
         return depositAccount;
     }
 
-    public void updateUserAccDepositStatus (User user) {
+    public void updateUserAccDepositStatus (int id) {
         UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
-        userAccDAO.updateDepositStatusById(user.getUserId());
+        userAccDAO.updateDepositStatusById(id);
     }
 }

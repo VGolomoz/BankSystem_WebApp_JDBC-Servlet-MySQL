@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.DepositAccount;
+import project.model.DepositAccount;
 
 public interface DepositAccDAO extends DAO<DepositAccount> {
 

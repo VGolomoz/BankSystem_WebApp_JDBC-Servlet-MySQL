@@ -5,7 +5,7 @@ import project.DAO.interfaces.OpReplenishmentDAO;
 import project.DAO.mappers.Mapper;
 import project.DAO.mappers.OpReplenishmentMapper;
 import project.DAO.queries.OpReplenishmentSQL;
-import project.model.entities.OpReplenishment;
+import project.model.OpReplenishment;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.DepositAccFields;
-import project.model.entities.DepositAccount;
+import project.model.DepositAccount;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

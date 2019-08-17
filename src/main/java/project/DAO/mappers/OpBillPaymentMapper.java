@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.OpBillPaymentFields;
-import project.model.entities.OpBillPayment;
+import project.model.OpBillPayment;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

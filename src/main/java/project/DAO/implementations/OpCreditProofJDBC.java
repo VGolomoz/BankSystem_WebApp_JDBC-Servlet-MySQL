@@ -5,7 +5,7 @@ import project.DAO.interfaces.OpCreditProofDAO;
 import project.DAO.mappers.Mapper;
 import project.DAO.mappers.OpCreditProofMapper;
 import project.DAO.queries.OpCreditProofSQL;
-import project.model.entities.OpCreditProof;
+import project.model.OpCreditProof;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

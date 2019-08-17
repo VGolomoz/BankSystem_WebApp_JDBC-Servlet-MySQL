@@ -53,8 +53,10 @@
 </form>
    </div>
         </div>
-        <div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-                    <button class="w3-btn w3-round-large" onclick="location.href='/'">Back to main menu</button>
+        <div class="w3-container w3-grey w3-opacity w3-left-align w3-padding">
+                    <button class="w3-btn w3-grey w3-border w3-border-white w3-round-large" onclick="location.href='/signIn'">Back to main</button>
                 </div>
+
+
             </body>
         </html>

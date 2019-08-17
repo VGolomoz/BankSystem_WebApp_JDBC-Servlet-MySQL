@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.User;
+import project.model.User;
 import project.util.MyExceptions.WrongPasswordException;
 
 public interface UserDAO extends DAO<User> {

@@ -5,10 +5,9 @@ import project.DAO.interfaces.OpBillPaymentDAO;
 import project.DAO.mappers.Mapper;
 import project.DAO.mappers.OpBillPaymentMapper;
 import project.DAO.queries.OpBillPaymentSQL;
-import project.model.entities.OpBillPayment;
+import project.model.OpBillPayment;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 

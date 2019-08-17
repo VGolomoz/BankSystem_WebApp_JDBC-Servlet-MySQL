@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.OpReplenishment;
+import project.model.OpReplenishment;
 
 import java.util.List;
 

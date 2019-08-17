@@ -4,10 +4,10 @@ import org.apache.log4j.Logger;
 import project.DAO.interfaces.FactoryDAO;
 import project.DAO.interfaces.OpBillPaymentDAO;
 import project.DAO.interfaces.UserAccDAO;
-import project.model.entities.OpBillPayment;
-import project.model.entities.User;
-import project.model.entities.UserAccount;
-import project.model.enums.OperationTypes;
+import project.model.OpBillPayment;
+import project.model.UserAccount;
+import project.util.enums.OperationTypes;
+import project.util.MyExceptions.UnsupportedPaymentException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,32 +25,31 @@ public class OpBillPaymentCommand implements PaymentCommand {
     }
 
     @Override
-    public String makePayment(HttpServletRequest request, HttpServletResponse response)  {
+    public String makePayment(HttpServletRequest request, HttpServletResponse response) throws UnsupportedPaymentException {
 
-        String result = "";
+        String result;
 
         final String operationId = request.getParameter("operationId");
 
         if (isSupportPayment(operationId)) {
             LOGGER.info("There is Operation Bill Payment started");
-            final User user = (User) request.getSession().getAttribute("loginedUser");
+            final int userId = (Integer) request.getSession().getAttribute("userId");
             final String billNumber = request.getParameter("billNumber");
             final String purpose = request.getParameter("purpose");
             final float amount = Float.valueOf(request.getParameter("amount"));
 
-            if (updateUserAccBalance(user, amount)) {
-                addToOperationHistory(user, billNumber, purpose, amount);
+            if (updateUserAccBalance(userId, amount)) {
+                addToOperationHistory(userId, billNumber, purpose, amount);
                 result = "Operation Successful";
             } else {
                 result = "Not enough money!";
             }
 
         } else {
-            try {
+            if (this.next == null) throw new UnsupportedPaymentException("Not supporting payment operation");
+            else {
                 LOGGER.info("There is not Operation Bill Payment, try next");
                 result = this.next.makePayment(request, response);
-            } catch (NullPointerException e){
-                LOGGER.debug("Not supporting payment operation from OpBillPaymentCommand.class in makePayment() method");
             }
         }
         return result;
@@ -63,21 +62,21 @@ public class OpBillPaymentCommand implements PaymentCommand {
         else return false;
     }
 
-    private boolean updateUserAccBalance(User user, float amount) {
+    private boolean updateUserAccBalance(int userId, float amount) {
         UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
-        UserAccount userAccount = userAccDAO.getById(user.getUserId());
+        UserAccount userAccount = userAccDAO.getById(userId);
         LOGGER.info("Check User Account Balance for enough money");
         if (userAccount.getBalance() >= amount) {
             final float newBalance = userAccount.getBalance() - amount;
-            userAccDAO.updateBalanceById(user.getUserId(), newBalance);
+            userAccDAO.updateBalanceById(userId, newBalance);
             LOGGER.info("User Account Balance updated");
             return true;
         } else return false;
     }
 
-    private void addToOperationHistory(User user, String billNumber, String purpose, float amount) {
+    private void addToOperationHistory(int userId, String billNumber, String purpose, float amount) {
         OpBillPayment opBillPayment = new OpBillPayment();
-        opBillPayment.setUserId(user.getUserId());
+        opBillPayment.setUserId(userId);
         opBillPayment.setBillNumber(billNumber);
         opBillPayment.setPurpose(purpose);
         opBillPayment.setAmount(amount);

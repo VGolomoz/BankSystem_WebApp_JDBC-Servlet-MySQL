@@ -1,4 +1,4 @@
-<%@ page import="project.model.entities.UserAccount" %>
+<%@ page import="project.model.UserAccount" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -16,7 +16,7 @@
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">RU</a>
         <a href="/open_deposit" class="w3-bar-item w3-button w3-border w3-light-grey">Deposit Account</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
-        <a href="/operations" class="w3-bar-item w3-button w3-border w3-light-grey">My Operations</a>
+        <a href="/operations" class="w3-bar-item w3-button w3-border w3-light-grey w3-disabled">My Operations</a>
     </div>
 </div>
 <br>
@@ -154,8 +154,14 @@ Replenishment Main Account Balance</button>
 <br>
 
 
-<div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-<button class="w3-btn w3-round-large" onclick="location.href='/'">Back to main menu</button>
+<div class="w3-bar w3-grey w3-padding">
+   <form method="get" action = "/signIn">
+   <button type=submit class="w3-btn w3-left w3-border w3-border-white w3-round-large" >Back to main</button>
+   </form>
+
+   <form method="get" action = "/logout">
+      <button type=submit class="w3-btn w3-right w3-border w3-border-white w3-round-large" >Logout</button>
+   </form>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.OpCreditProof;
+import project.model.OpCreditProof;
 
 import java.util.List;
 

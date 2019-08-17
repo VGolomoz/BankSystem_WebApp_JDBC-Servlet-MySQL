@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.UsersFields;
-import project.model.entities.User;
+import project.model.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

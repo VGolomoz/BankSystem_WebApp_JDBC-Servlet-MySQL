@@ -5,7 +5,7 @@ import project.DAO.interfaces.UserAccDAO;
 import project.DAO.mappers.Mapper;
 import project.DAO.mappers.UserAccMapper;
 import project.DAO.queries.UserAccSQL;
-import project.model.entities.UserAccount;
+import project.model.UserAccount;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

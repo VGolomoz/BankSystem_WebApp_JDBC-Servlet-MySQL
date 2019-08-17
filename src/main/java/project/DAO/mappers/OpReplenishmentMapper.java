@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.OpReplenishmentFields;
-import project.model.entities.OpReplenishment;
+import project.model.OpReplenishment;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -26,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-light-grey w3-center" style="padding:128px 16px">
     <h1 class="w3-margin w3-jumbo">BANKING SYSTEM</h1>
-    <form method="post" >
+    <form method="get" action = "/signIn">
     <button type=submit class="w3-button w3-green w3-padding-large w3-large w3-margin-top">Get Started</button>
     </form>
 </header>

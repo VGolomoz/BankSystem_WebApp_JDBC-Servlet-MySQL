@@ -6,7 +6,7 @@ import project.DAO.mappers.UserMapper;
 import project.DAO.mappers.Mapper;
 import project.DAO.queries.DBFields.UsersFields;
 import project.DAO.queries.UserSQL;
-import project.model.entities.User;
+import project.model.User;
 import project.util.MyExceptions.WrongPasswordException;
 
 import java.sql.*;

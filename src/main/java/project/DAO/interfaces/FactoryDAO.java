@@ -2,7 +2,6 @@ package project.DAO.interfaces;
 
 import org.apache.log4j.Logger;
 import project.DAO.implementations.FactoryJDBC;
-import project.model.entities.OpTransfer;
 
 public abstract class FactoryDAO {
 

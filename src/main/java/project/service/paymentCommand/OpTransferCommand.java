@@ -5,10 +5,10 @@ import project.DAO.interfaces.FactoryDAO;
 import project.DAO.interfaces.OpTransferDAO;
 import project.DAO.interfaces.UserAccDAO;
 import project.DAO.interfaces.UserDAO;
-import project.model.entities.OpTransfer;
-import project.model.entities.User;
-import project.model.entities.UserAccount;
-import project.model.enums.OperationTypes;
+import project.model.OpTransfer;
+import project.model.UserAccount;
+import project.util.enums.OperationTypes;
+import project.util.MyExceptions.UnsupportedPaymentException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,20 +27,21 @@ public class OpTransferCommand implements PaymentCommand {
     }
 
     @Override
-    public String makePayment(HttpServletRequest request, HttpServletResponse response) {
-        String result = "";
+    public String makePayment(HttpServletRequest request, HttpServletResponse response) throws UnsupportedPaymentException {
+
+        String result;
 
         final String operationId = request.getParameter("operationId");
 
         if (isSupportPayment(operationId)) {
             LOGGER.info("There is Operation Transfer started");
-            final User user = (User) request.getSession().getAttribute("loginedUser");
+            final int userId = (Integer) request.getSession().getAttribute("userId");
             final String recipientMail = request.getParameter("recipientMail");
             final float amount = Float.valueOf(request.getParameter("amount"));
 
             if (isRecipientExist(recipientMail)) {
-                if (updateUserAccBalance(user, recipientId, amount)) {
-                    addToOperationHistory(user, recipientMail, amount);
+                if (updateUserAccBalance(userId, recipientId, amount)) {
+                    addToOperationHistory(userId, recipientMail, amount);
                     result = "Operation Successful";
                 } else {
                     result = "Not enough money!";
@@ -49,11 +50,10 @@ public class OpTransferCommand implements PaymentCommand {
                 result = "Client with that email does not exist";
             }
         } else {
-            try {
-                LOGGER.info("There is not Operation Bill Payment, try next");
+            if (this.next == null) throw new UnsupportedPaymentException("Not supporting payment operation");
+            else {
+                LOGGER.info("There is not Operation Transfer, try next");
                 result = this.next.makePayment(request, response);
-            } catch (NullPointerException e) {
-                LOGGER.debug("Not supporting payment operation from TransferCommand.class in makePayment() method");
             }
         }
         return result;
@@ -72,17 +72,16 @@ public class OpTransferCommand implements PaymentCommand {
         if (userDAO.isUserExists(mail)) {
             recipientId = userDAO.getUserIdByMail(mail);
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
-    private boolean updateUserAccBalance(User user, int recipientId, float amount) {
+    private boolean updateUserAccBalance(int userId, int recipientId, float amount) {
         UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
-        UserAccount userAccount = userAccDAO.getById(user.getUserId());
+        UserAccount userAccount = userAccDAO.getById(userId);
         LOGGER.info("Check User Account Balance for enough money");
         if (userAccount.getBalance() >= amount) {
             final float newBalance = userAccount.getBalance() - amount;
-            userAccDAO.updateBalanceById(user.getUserId(), newBalance);
+            userAccDAO.updateBalanceById(userId, newBalance);
             LOGGER.info("User Account Balance updated");
 
             userAccount = userAccDAO.getById(recipientId);
@@ -93,9 +92,9 @@ public class OpTransferCommand implements PaymentCommand {
         } else return false;
     }
 
-    private void addToOperationHistory(User user, String recipientMail, float amount) {
+    private void addToOperationHistory(int userId, String recipientMail, float amount) {
         OpTransfer opTransfer = new OpTransfer();
-        opTransfer.setUserId(user.getUserId());
+        opTransfer.setUserId(userId);
         opTransfer.setRecipientMail(recipientMail);
         opTransfer.setAmount(amount);
 

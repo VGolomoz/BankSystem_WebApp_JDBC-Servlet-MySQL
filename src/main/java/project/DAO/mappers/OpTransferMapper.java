@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.OpTransferFields;
-import project.model.entities.OpTransfer;
+import project.model.OpTransfer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

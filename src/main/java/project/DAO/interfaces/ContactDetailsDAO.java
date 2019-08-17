@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.ContactDetails;
+import project.model.ContactDetails;
 
 public interface ContactDetailsDAO extends DAO<ContactDetails> {
 

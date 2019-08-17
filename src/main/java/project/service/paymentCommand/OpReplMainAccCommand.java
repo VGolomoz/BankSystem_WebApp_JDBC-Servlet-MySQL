@@ -4,10 +4,10 @@ import org.apache.log4j.Logger;
 import project.DAO.interfaces.FactoryDAO;
 import project.DAO.interfaces.OpReplenishmentDAO;
 import project.DAO.interfaces.UserAccDAO;
-import project.model.entities.OpReplenishment;
-import project.model.entities.User;
-import project.model.entities.UserAccount;
-import project.model.enums.OperationTypes;
+import project.model.OpReplenishment;
+import project.model.UserAccount;
+import project.util.enums.OperationTypes;
+import project.util.MyExceptions.UnsupportedPaymentException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,25 +25,25 @@ public class OpReplMainAccCommand implements PaymentCommand {
     }
 
     @Override
-    public String makePayment(HttpServletRequest request, HttpServletResponse response) {
-        String result = "";
+    public String makePayment(HttpServletRequest request, HttpServletResponse response) throws UnsupportedPaymentException {
+
+        String result;
 
         final String operationId = request.getParameter("operationId");
 
         if (isSupportPayment(operationId)) {
             LOGGER.info("There is Operation Replenishment Main Account Balance started");
-            final User user = (User) request.getSession().getAttribute("loginedUser");
+            final int userId = (Integer) request.getSession().getAttribute("userId");
             final float amount = Float.valueOf(request.getParameter("amount"));
 
-            updateUserAccBalance(user, amount);
-            addToOperationHistory(user, amount);
+            updateUserAccBalance(userId, amount);
+            addToOperationHistory(userId, amount);
             result = "Operation Successful";
         } else {
-            try {
+            if (this.next == null) throw new UnsupportedPaymentException("Not supporting payment operation");
+            else {
                 LOGGER.info("There is not Replenishment Main Account Payment, try next");
                 result = this.next.makePayment(request, response);
-            } catch (NullPointerException e){
-                LOGGER.debug("Not supporting payment operation from OpReplMainAccCommand.class in makePayment() method");
             }
         }
         return result;
@@ -56,19 +56,19 @@ public class OpReplMainAccCommand implements PaymentCommand {
         else return false;
     }
 
-    private void updateUserAccBalance(User user, float amount) {
+    private void updateUserAccBalance(int userId, float amount) {
         UserAccDAO userAccDAO = factoryDAO.createUserAccDAO();
-        UserAccount userAccount = userAccDAO.getById(user.getUserId());
+        UserAccount userAccount = userAccDAO.getById(userId);
         LOGGER.info("Try to update Main User Account Balance");
         final float newBalance = userAccount.getBalance() + amount;
-        userAccDAO.updateBalanceById(user.getUserId(), newBalance);
+        userAccDAO.updateBalanceById(userId, newBalance);
         LOGGER.info("Main User Account Balance updated");
         }
 
-    private void addToOperationHistory(User user,float amount) {
+    private void addToOperationHistory(int userId,float amount) {
         OpReplenishmentDAO opReplenishmentDAO = factoryDAO.createOpReplenishmentDAO();
         OpReplenishment opReplenishment = new OpReplenishment();
-        opReplenishment.setUserId(user.getUserId());
+        opReplenishment.setUserId(userId);
         opReplenishment.setAccName("MainAcc");
         opReplenishment.setAmount(amount);
         opReplenishmentDAO.create(opReplenishment);

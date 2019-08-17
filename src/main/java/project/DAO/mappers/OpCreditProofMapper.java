@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.OpCreditProofFields;
-import project.model.entities.OpCreditProof;
+import project.model.OpCreditProof;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -5,7 +5,7 @@ import project.DAO.interfaces.DepositAccDAO;
 import project.DAO.mappers.DepositAccMapper;
 import project.DAO.mappers.Mapper;
 import project.DAO.queries.DepositAccSQL;
-import project.model.entities.DepositAccount;
+import project.model.DepositAccount;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

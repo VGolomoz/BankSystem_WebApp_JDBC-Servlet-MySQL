@@ -1,8 +1,9 @@
 package project.servlets;
 
 import org.apache.log4j.Logger;
-import project.model.entities.ContactDetails;
-import project.model.entities.UserAccount;
+import project.model.ContactDetails;
+import project.model.UserAccount;
+import project.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,12 +18,18 @@ public class ClientServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("ClientServlet call doGet() method");
-        request.getRequestDispatcher("/views/error_page.jsp").forward(request, response);
-    }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LOGGER.info("ClientServlet call doPost() method");
-        request.getRequestDispatcher("/views/error_page.jsp").forward(request, response);
+        UserService userService = new UserService();
+        int userId = (Integer) request.getSession().getAttribute("userId");
+
+        LOGGER.info("Create UserAccount and ContactDetails objects from DB");
+        UserAccount userAccount = userService.getUserAccountFromDB(userId);
+        ContactDetails contactDetails = userService.getContactDetailsFromDB(userId);
+
+        LOGGER.info("Set session attributes and get client page");
+        request.getSession().setAttribute("userAccount", userAccount);
+        request.getSession().setAttribute("contactDetails", contactDetails);
+
+        request.getRequestDispatcher("/views/client/client.jsp").forward(request, response);
     }
 }

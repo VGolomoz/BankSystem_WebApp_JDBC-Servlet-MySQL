@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.OpTransfer;
+import project.model.OpTransfer;
 
 import java.util.List;
 

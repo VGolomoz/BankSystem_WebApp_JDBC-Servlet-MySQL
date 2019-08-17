@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.ContactDetailsFields;
-import project.model.entities.ContactDetails;
+import project.model.ContactDetails;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

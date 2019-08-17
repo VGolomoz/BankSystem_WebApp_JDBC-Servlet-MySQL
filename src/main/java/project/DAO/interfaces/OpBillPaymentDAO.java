@@ -1,6 +1,6 @@
 package project.DAO.interfaces;
 
-import project.model.entities.OpBillPayment;
+import project.model.OpBillPayment;
 
 import java.util.List;
 

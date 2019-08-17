@@ -5,9 +5,9 @@ import project.DAO.interfaces.ContactDetailsDAO;
 import project.DAO.interfaces.FactoryDAO;
 import project.DAO.interfaces.UserAccDAO;
 import project.DAO.interfaces.UserDAO;
-import project.model.entities.ContactDetails;
-import project.model.entities.User;
-import project.model.entities.UserAccount;
+import project.model.ContactDetails;
+import project.model.User;
+import project.model.UserAccount;
 import project.util.MyExceptions.WrongPasswordException;
 
 

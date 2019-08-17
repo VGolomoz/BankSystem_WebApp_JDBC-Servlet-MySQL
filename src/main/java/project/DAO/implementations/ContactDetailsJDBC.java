@@ -5,7 +5,7 @@ import project.DAO.interfaces.ContactDetailsDAO;
 import project.DAO.mappers.ContactDetailsMapper;
 import project.DAO.mappers.Mapper;
 import project.DAO.queries.ContactDetailsSQL;
-import project.model.entities.ContactDetails;
+import project.model.ContactDetails;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,7 +1,7 @@
 package project.DAO.mappers;
 
 import project.DAO.queries.DBFields.CreditAccFields;
-import project.model.entities.CreditAccount;
+import project.model.CreditAccount;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

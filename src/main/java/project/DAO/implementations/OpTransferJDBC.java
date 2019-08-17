@@ -5,7 +5,7 @@ import project.DAO.interfaces.OpTransferDAO;
 import project.DAO.mappers.Mapper;
 import project.DAO.mappers.OpTransferMapper;
 import project.DAO.queries.OpTransferSQL;
-import project.model.entities.OpTransfer;
+import project.model.OpTransfer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
