@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import project.model.User;
 import project.util.enums.Role;
 import project.service.UserService;
-import project.util.MyExceptions.WrongPasswordException;
+import project.util.myExceptions.WrongPasswordException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

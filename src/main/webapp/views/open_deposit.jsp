@@ -3,7 +3,9 @@
 <html>
 <title>Deposit offers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/w3.css">
+<style>
+   <%@include file="/styles/w3.css" %>
+</style>
 <body>
 
 <div class="w3-top">
@@ -13,7 +15,7 @@
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">EN</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">RU</a>
         <a href="/open_deposit" class="w3-bar-item w3-button w3-border w3-light-grey w3-disabled">Deposit Account</a>
-        <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
+        <a href="/open_credit" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
         <a href="/operations" class="w3-bar-item w3-button w3-border w3-light-grey">My Operations</a>
     </div>
 </div>
@@ -31,7 +33,7 @@
   <ul class="w3-ul w3-border w3-center w3-hover-shadow ">
     <li class="w3-black w3-xlarge w3-padding-32 align-items: center">Basic</li>
     <li class="w3-padding-16"><b>UAH</b> Currency</li>
-    <li class="w3-padding-16"><b>10%</b> Rate</li>
+    <li class="w3-padding-16"><b>10% per annum</b> Rate</li>
     <li class="w3-padding-16"><b>1 year</b> Term</li>
     </li>
     <li class="w3-light-grey w3-padding-24">
@@ -48,7 +50,7 @@
   <ul class="w3-ul w3-border w3-center w3-hover-shadow">
     <li class="w3-blue w3-xlarge w3-padding-32">Basic+</li>
     <li class="w3-padding-16"><b>UAH</b> Currency</li>
-        <li class="w3-padding-16"><b>15%</b> Rate</li>
+        <li class="w3-padding-16"><b>15% per annum</b> Rate</li>
         <li class="w3-padding-16"><b>1 year</b> Term</li>
     </li>
     <li class="w3-light-grey w3-padding-24">
@@ -65,7 +67,7 @@
   <ul class="w3-ul w3-border w3-center w3-hover-shadow">
     <li class="w3-green w3-xlarge w3-padding-32">Super+</li>
     <li class="w3-padding-16"><b>USD</b> Currency</li>
-        <li class="w3-padding-16"><b>10%</b> Rate</li>
+        <li class="w3-padding-16"><b>10% per annum</b> Rate</li>
         <li class="w3-padding-16"><b>1 year</b> Term</li>
     </li>
     <li class="w3-light-grey w3-padding-24">

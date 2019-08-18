@@ -1,4 +1,4 @@
-package project.util.MyExceptions;
+package project.util.myExceptions;
 
 public class WrongPasswordException extends Exception {
 

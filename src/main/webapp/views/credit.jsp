@@ -4,7 +4,9 @@
 <html>
 <title>Credit Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/w3.css">
+<style>
+   <%@include file="/styles/w3.css" %>
+</style>
 <body>
 
 
@@ -33,10 +35,11 @@ out.println (" <table class=\"w3-table w3-striped w3-bordered w3-border\"> " +
              " <thead class=\"w3-teal\"> " +
              " <th style=\"width:50%\"> " + "Account Information" +
              " </th><th></th></thead> " +
-             " <tr><td>Balance</td><td>"+depositAccount.getBalance()+"</td></tr> " +
-             " <tr><td>Currency</td><td>"+depositAccount.getCurrency()+"</td></tr> " +
-             " <tr><td>Term</td><td>"+depositAccount.getTerm()+"</td></tr> " +
-             " <tr><td>Rate</td><td>"+depositAccount.getRate()+" %"+"</td></tr></table>");
+             " <tr><td>Balance</td><td>"+creditAccount.getBalance()+"</td></tr> " +
+             " <tr><td>Currency</td><td>"+creditAccount.getCurrency()+"</td></tr> " +
+             " <tr><td>Limit</td><td>"+creditAccount.getLimit()+"</td></tr> " +
+             " <tr><td>Rate</td><td>"+creditAccount.getRate()+" % per annum</td></tr> " +
+             " <tr><td>Accrued interest</td><td>"+creditAccount.getAccrued_interest()+" %"+"</td></tr></table>");
             %>
 
   <h2></h2>

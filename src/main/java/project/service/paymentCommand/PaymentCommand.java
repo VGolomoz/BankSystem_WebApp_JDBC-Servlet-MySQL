@@ -1,6 +1,6 @@
 package project.service.paymentCommand;
 
-import project.util.MyExceptions.UnsupportedPaymentException;
+import project.util.myExceptions.UnsupportedPaymentException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

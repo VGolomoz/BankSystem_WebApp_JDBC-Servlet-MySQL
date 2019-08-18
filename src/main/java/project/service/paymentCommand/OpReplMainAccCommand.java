@@ -7,7 +7,7 @@ import project.DAO.interfaces.UserAccDAO;
 import project.model.OpReplenishment;
 import project.model.UserAccount;
 import project.util.enums.OperationTypes;
-import project.util.MyExceptions.UnsupportedPaymentException;
+import project.util.myExceptions.UnsupportedPaymentException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

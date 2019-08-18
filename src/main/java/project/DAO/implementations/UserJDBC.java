@@ -7,7 +7,7 @@ import project.DAO.mappers.Mapper;
 import project.DAO.queries.DBFields.UsersFields;
 import project.DAO.queries.UserSQL;
 import project.model.User;
-import project.util.MyExceptions.WrongPasswordException;
+import project.util.myExceptions.WrongPasswordException;
 
 import java.sql.*;
 import java.util.ArrayList;

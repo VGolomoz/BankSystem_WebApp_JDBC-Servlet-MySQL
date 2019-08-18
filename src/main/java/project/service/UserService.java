@@ -8,7 +8,7 @@ import project.DAO.interfaces.UserDAO;
 import project.model.ContactDetails;
 import project.model.User;
 import project.model.UserAccount;
-import project.util.MyExceptions.WrongPasswordException;
+import project.util.myExceptions.WrongPasswordException;
 
 
 public class UserService {

@@ -6,12 +6,8 @@ import java.util.Objects;
 public class OpCreditProof extends Operation {
 
     private Integer managerId;
-    private Boolean decision;
-
-    public OpCreditProof() {
-        this.managerId = null;
-        this.decision = null;
-    }
+    private String decision;
+    private String reason;
 
     public Integer getManagerId() {
         return managerId;
@@ -21,12 +17,20 @@ public class OpCreditProof extends Operation {
         this.managerId = managerId;
     }
 
-    public Boolean getDecision() {
+    public String getDecision() {
         return decision;
     }
 
-    public void setDecision(Boolean decision) {
+    public void setDecision(String decision) {
         this.decision = decision;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     @Override
@@ -36,12 +40,13 @@ public class OpCreditProof extends Operation {
         if (!super.equals(o)) return false;
         OpCreditProof that = (OpCreditProof) o;
         return Objects.equals(managerId, that.managerId) &&
-                Objects.equals(decision, that.decision);
+                Objects.equals(decision, that.decision) &&
+                Objects.equals(reason, that.reason);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), managerId, decision);
+        return Objects.hash(super.hashCode(), managerId, decision, reason);
     }
 
     @Override
@@ -49,6 +54,7 @@ public class OpCreditProof extends Operation {
         return "OpCreditProof{" +
                 "managerId=" + managerId +
                 ", decision=" + decision +
+                ", reason='" + reason + '\'' +
                 ", userId=" + userId +
                 ", operationDate=" + operationDate +
                 '}';

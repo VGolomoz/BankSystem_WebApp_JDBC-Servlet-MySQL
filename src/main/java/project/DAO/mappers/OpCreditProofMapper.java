@@ -16,7 +16,8 @@ public class OpCreditProofMapper implements Mapper<OpCreditProof> {
         opCreditProof.setUserId(resultSet.getInt(OpCreditProofFields.USER_ID));
         opCreditProof.setManagerId(resultSet.getInt(OpCreditProofFields.MANAGER_ID));
         opCreditProof.setOperationDate(resultSet.getDate(OpCreditProofFields.DATE));
-        opCreditProof.setDecision(resultSet.getBoolean(OpCreditProofFields.DECISION));
+        opCreditProof.setDecision(resultSet.getString(OpCreditProofFields.DECISION));
+        opCreditProof.setReason(resultSet.getString(OpCreditProofFields.REASON));
 
         return opCreditProof;
     }

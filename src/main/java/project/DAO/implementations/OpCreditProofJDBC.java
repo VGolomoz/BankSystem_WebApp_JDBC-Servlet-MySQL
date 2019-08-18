@@ -26,10 +26,21 @@ public class OpCreditProofJDBC implements OpCreditProofDAO {
             ps.setInt(1, entity.getUserId());
             ps.setInt(2, entity.getManagerId());
             ps.setDate(3, entity.getOperationDate());
-            ps.setBoolean(4, entity.getDecision());
+            ps.setString(4, entity.getDecision());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOG.error("SQLException occurred in OpCreditProofJDBC.class from create() method", e);
+        }
+    }
+
+    @Override
+    public void createIdRequest(int id){
+        try (PreparedStatement ps = connection.prepareStatement(OpCreditProofSQL.INSERT_ID_REQUEST_TO_CREDITPROOF_TABLE.getQUERY())) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            LOG.debug("Executed query" + OpCreditProofSQL.INSERT_ID_REQUEST_TO_CREDITPROOF_TABLE);
+        } catch (SQLException e) {
+            LOG.error("SQLException occurred in OpCreditProofJDBC.class from createIdRequest method", e);
         }
     }
 
@@ -57,7 +68,21 @@ public class OpCreditProofJDBC implements OpCreditProofDAO {
 
     @Override
     public OpCreditProof getById(int id) {
-        throw new UnsupportedOperationException();
+        Mapper<OpCreditProof> opCreditProofMapper = new OpCreditProofMapper();
+        OpCreditProof result = new OpCreditProof();
+
+        try (PreparedStatement ps = connection.prepareStatement(OpCreditProofSQL.READ_BY_ID.getQUERY())) {
+            ps.setInt(1, id);
+            final ResultSet rs = ps.executeQuery();
+            LOG.debug("Executed query" + OpCreditProofSQL.READ_BY_ID);
+            if (rs.next()) {
+                LOG.debug("Check is ResultSet has next");
+                result = opCreditProofMapper.getEntity(rs);
+            }
+        } catch (SQLException e) {
+            LOG.error("SQLException occurred in OpCreditProofJDBC.class from getById() method", e);
+        }
+        return result;
     }
 
     @Override

@@ -51,9 +51,10 @@ PRIMARY KEY(user_id)
 
 CREATE TABLE op_credit_proof (
 user_id int NOT NULL,
-manager_id int,
-decision BOOLEAN,
-`date` DATETIME NOT NULL,
+manager_id int DEFAULT NULL,
+decision VARCHAR(255) DEFAULT NULL,
+reason VARCHAR(255) DEFAULT NULL,
+`date` DATETIME DEFAULT NULL,
 PRIMARY KEY (user_id)
 );
 
@@ -93,6 +94,18 @@ FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);
 
 ALTER TABLE `op_credit_proof` ADD CONSTRAINT `op_credit_proof_fk0`
 FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`);
+
+INSERT INTO users (mail, `password`, `role` ) VALUES ('client', 'client', 3);
+INSERT INTO users (mail, `password`, `role` ) VALUES ('manager', 'manager', 2);
+INSERT INTO user_account (user_id, balance, currency, validity, deposit, credit) VALUES (1, 0, 'UAH', '2020.12.12', 0, 0);
+INSERT INTO user_account (user_id, balance, currency, validity, deposit, credit) VALUES (2, 0, 'UAH', '2020.12.12', 0, 0);
+
+INSERT INTO contact_details (user_id, `name`, lastName, address, mobilePhone, mail, birthday)
+VALUES (1, 'Bob', 'Sinclar', 'Paris, France', '00 33 142967000', 'BobSinclar@gmail.com', '1969.05.10');
+
+INSERT INTO contact_details (user_id, `name`, lastName, address, mobilePhone, mail, birthday)
+VALUES (2, 'Bob', 'Dylan',  'Hibbing, Minnesota, U.S.', '00 44 142967000', 'BobDylan@gmail.com', '1941.05.24');
+
 
 
 

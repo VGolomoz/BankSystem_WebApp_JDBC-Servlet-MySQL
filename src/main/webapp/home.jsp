@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${locale}"/>
+<fmt:setBundle basename="resources.messages" var="bundle" scope="session" />
+
 <title>Banking System</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/w3.css">
+<style>
+   <%@include file="/styles/w3.css"%>
+</style>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
@@ -25,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="w3-container w3-light-grey w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">BANKING SYSTEM</h1>
+    <h1 class="w3-margin w3-jumbo"><fmt:messages bundle="${bundle}" key="main_title" /></h1>
     <form method="get" action = "/signIn">
     <button type=submit class="w3-button w3-green w3-padding-large w3-large w3-margin-top">Get Started</button>
     </form>

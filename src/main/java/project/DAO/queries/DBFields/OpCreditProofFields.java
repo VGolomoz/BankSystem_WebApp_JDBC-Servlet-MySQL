@@ -6,5 +6,6 @@ public interface OpCreditProofFields {
     String USER_ID = "user_Id";
     String MANAGER_ID = "manager_id";
     String DECISION = "decision";
+    String REASON = "reason";
     String DATE = "date";
 }

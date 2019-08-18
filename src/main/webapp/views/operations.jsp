@@ -4,7 +4,9 @@
 <html>
 <title>Deposit offers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/w3.css">
+<style>
+   <%@include file="/styles/w3.css" %>
+</style>
 <body>
 
 
@@ -15,7 +17,7 @@
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">EN</a>
         <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey w3-right">RU</a>
         <a href="/open_deposit" class="w3-bar-item w3-button w3-border w3-light-grey">Deposit Account</a>
-        <a href="#" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
+        <a href="/open_credit" class="w3-bar-item w3-button w3-border w3-light-grey">Credit Account</a>
         <a href="/operations" class="w3-bar-item w3-button w3-border w3-light-grey w3-disabled">My Operations</a>
     </div>
 </div>
@@ -35,7 +37,7 @@
                     }
                 %>
 
-      <div class="w3-display-container">
+<div class="w3-display-container">
 <button onclick="myFunction('OpBillPayment')" class="w3-button w3-block w3-light-green w3-center-align">
 Bill Payment</button>
 

@@ -96,6 +96,17 @@ public class UserAccJDBC implements UserAccDAO {
     }
 
     @Override
+    public void updateCreditStatusById(int id) {
+        try (PreparedStatement ps = connection.prepareStatement(UserAccSQL.UPDATE_CREDIT_STATUS_BY_ID.getQUERY())) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            LOG.debug("Executed query" + UserAccSQL.UPDATE_CREDIT_STATUS_BY_ID);
+        } catch (SQLException e) {
+            LOG.error("SQLException occurred in UserAccJDBC.class from updateCreditStatusById() method", e);
+        }
+    }
+
+    @Override
     public void updateBalanceById(int id, float amount) {
         try (PreparedStatement ps = connection.prepareStatement(UserAccSQL.UPDATE_BALANCE_BY_ID.getQUERY())) {
             ps.setFloat(1, amount);

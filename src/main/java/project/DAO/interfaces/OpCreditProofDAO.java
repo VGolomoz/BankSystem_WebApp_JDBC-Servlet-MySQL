@@ -8,4 +8,6 @@ public interface OpCreditProofDAO extends DAO<OpCreditProof> {
 
     List<OpCreditProof> getAllById(int id);
 
+    void createIdRequest(int id);
+
 }

@@ -2,7 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Banking system</title>
-    <link rel="stylesheet" href="styles/w3.css">
+    <style>
+       <%@include file="/styles/w3.css" %>
+    </style>
 </head>
 <body class="w3-light-grey">
     <!-- header -->

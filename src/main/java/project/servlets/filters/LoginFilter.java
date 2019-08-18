@@ -15,6 +15,7 @@ public class LoginFilter implements Filter {
 
     private final Logger LOGGER = Logger.getLogger(LoginFilter.class);
     List<String> clientURL;
+    List<String> managerURL;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -22,8 +23,20 @@ public class LoginFilter implements Filter {
         clientURL.add("/client");
         clientURL.add("/deposit");
         clientURL.add("/open_deposit");
+        clientURL.add("/open_credit");
         clientURL.add("/operations");
+        clientURL.add("/operationsHistory");
         clientURL.add("/signIn");
+
+        managerURL = new ArrayList<>();
+        managerURL.add("/manager");
+        managerURL.add("/deposit");
+        managerURL.add("/open_deposit");
+        managerURL.add("/open_credit");
+        managerURL.add("/operations");
+        managerURL.add("/operationsHistory");
+        managerURL.add("/request_service");
+        managerURL.add("/signIn");
     }
 
     @Override
@@ -45,7 +58,7 @@ public class LoginFilter implements Filter {
                 LOGGER.info("Role - Client, go to client's page");
                 filterChain.doFilter(request, response);
 
-            } else if (roleId == Role.MANAGER.getRoleId()) {
+            } else if (roleId == Role.MANAGER.getRoleId()  && managerURL.contains(path)) {
                 LOGGER.info("Role - Manager, go to manager page");
                 filterChain.doFilter(request, response);
 
@@ -61,29 +74,6 @@ public class LoginFilter implements Filter {
             }
         }
     }
-
-        /*if (!path.equals("/home") && !path.equals("/home.jsp")) {
-
-            if (clientURL.contains(path) && session.getAttribute("userId") != null) {
-                LOGGER.info("User is logined");
-                int roleId = (Integer) request.getSession().getAttribute("roleId");
-                if (roleId == Role.CLIENT.getRoleId() && clientURL.contains(path)) {
-                    LOGGER.info("Role - Client, go to client's page");
-                    filterChain.doFilter(request, response);
-
-                } else if (roleId == Role.MANAGER.getRoleId()) {
-                    LOGGER.info("Role - Manager, go to manager page");
-                    filterChain.doFilter(request, response);
-
-                } else if (roleId == Role.ADMIN.getRoleId()) {
-                    LOGGER.info("Role - Admin, go to admin page");
-                    filterChain.doFilter(request, response);
-                }
-            } else {
-                LOGGER.info("Not logged in or logout, redirect to home.jsp");
-                request.getRequestDispatcher("/signIn").forward(request, response);
-            }
-        } else request.getRequestDispatcher("/home.jsp").forward(request, response);*/
 
     @Override
     public void destroy() {
