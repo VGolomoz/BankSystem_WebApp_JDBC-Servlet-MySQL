@@ -115,39 +115,6 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <filter>
-    <filter-name>EncodingFilter</filter-name>
-    <filter-class>project.servlets.filters.EncodingFilter</filter-class>
-    <init-param>
-      <param-name>encoding_type</param-name>
-      <param-value>UTF-8</param-value>
-    </init-param>
-  </filter>
-
-  <filter-mapping>
-    <filter-name>EncodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-
-  <filter>
-    <filter-name>LocalizationFilter</filter-name>
-    <filter-class>project.servlets.filters.LocalizationFilter</filter-class>
-    <init-param>
-      <param-name>bundle</param-name>
-      <param-value>messages</param-value>
-    </init-param>
-    <init-param>
-      <param-name>locale</param-name>
-      <param-value>en</param-value>
-    </init-param>
-  </filter>
-
-  <filter-mapping>
-    <filter-name>LocalizationFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-
-
   <error-page>
     <error-code>403</error-code>
     <location>/error/403.jpg</location>

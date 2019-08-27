@@ -49472,3 +49472,301 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key '
 2019-08-18 20:16:58 INFO  LoginFilter:52 - Servlet path /home
 2019-08-18 20:16:58 INFO  LoginFilter:51 - Check session
 2019-08-18 20:16:58 INFO  LoginFilter:52 - Servlet path /favicon.ico
+2019-08-27 15:51:09 INFO  LoginFilter:51 - Check session
+2019-08-27 15:51:09 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:51:09 INFO  LoginFilter:51 - Check session
+2019-08-27 15:51:09 INFO  LoginFilter:52 - Servlet path /favicon.ico
+2019-08-27 15:52:28 INFO  LoginFilter:51 - Check session
+2019-08-27 15:52:28 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:52:28 INFO  LoginFilter:51 - Check session
+2019-08-27 15:52:28 INFO  LoginFilter:52 - Servlet path /favicon.ico
+2019-08-27 15:52:38 INFO  LoginFilter:51 - Check session
+2019-08-27 15:52:38 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:53:19 INFO  LoginFilter:51 - Check session
+2019-08-27 15:53:19 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:55:43 INFO  LoginFilter:51 - Check session
+2019-08-27 15:55:43 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:55:43 INFO  LoginFilter:51 - Check session
+2019-08-27 15:55:43 INFO  LoginFilter:52 - Servlet path /favicon.ico
+2019-08-27 15:56:38 INFO  LoginFilter:51 - Check session
+2019-08-27 15:56:38 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:56:38 INFO  LoginFilter:51 - Check session
+2019-08-27 15:56:38 INFO  LoginFilter:52 - Servlet path /favicon.ico
+2019-08-27 15:56:38 INFO  LoginFilter:51 - Check session
+2019-08-27 15:56:38 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:56:57 INFO  LoginFilter:51 - Check session
+2019-08-27 15:56:57 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:58:15 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:15 INFO  LoginFilter:52 - Servlet path /home
+2019-08-27 15:58:35 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:35 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:58:35 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:58:35 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:58:47 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:47 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:58:47 INFO  SignInServlet:40 - SignInServlet call doPost() method
+2019-08-27 15:58:47 DEBUG FactoryDAO:35 - Creating  FactoryDAO
+2019-08-27 15:58:47 DEBUG DBCPDataSource:33 - Connection received 965158720, URL=jdbc:mysql://localhost:3306/bank_system?serverTimezone=UTC, UserName=root@localhost, MySQL Connector/J
+2019-08-27 15:58:47 DEBUG UserJDBC:32 - Executed queryREAD_BY_MAIL
+2019-08-27 15:58:47 INFO  SignInServlet:67 - Unknown login
+2019-08-27 15:58:47 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:47 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:58:47 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:58:47 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:58:51 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:51 INFO  LoginFilter:52 - Servlet path /registration
+2019-08-27 15:58:51 INFO  RegistrationServlet:24 - RegistrationServlet call doGet() method
+2019-08-27 15:58:54 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:54 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:58:54 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:58:54 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:58:56 INFO  LoginFilter:51 - Check session
+2019-08-27 15:58:56 INFO  LoginFilter:52 - Servlet path /registration
+2019-08-27 15:58:56 INFO  RegistrationServlet:24 - RegistrationServlet call doGet() method
+2019-08-27 15:59:06 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:06 INFO  LoginFilter:52 - Servlet path /registration
+2019-08-27 15:59:06 INFO  RegistrationServlet:30 - RegistrationServlet call doPost() method
+2019-08-27 15:59:06 INFO  RegistrationServlet:32 - Create new user in DB
+2019-08-27 15:59:06 DEBUG UserJDBC:85 - Executed queryINSERT_TO_USERS_TABLE
+2019-08-27 15:59:06 ERROR UserJDBC:91 - SQLException occurred in UserJDBC.class from create() method
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'asd' for key 'mail'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at project.DAO.implementations.UserJDBC.create(UserJDBC.java:89)
+	at project.DAO.implementations.UserJDBC.create(UserJDBC.java:17)
+	at project.service.UserService.createUserInDatabase(UserService.java:46)
+	at project.servlets.RegistrationServlet.doPost(RegistrationServlet.java:37)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:749)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:487)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:412)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:339)
+	at project.servlets.filters.LoginFilter.doFilter(LoginFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2019-08-27 15:59:06 DEBUG UserJDBC:49 - Executed queryREAD_ID_BY_MAIL
+2019-08-27 15:59:06 DEBUG UserJDBC:51 - Check is ResultSet has next
+2019-08-27 15:59:06 INFO  RegistrationServlet:39 - Create new user account in DB
+2019-08-27 15:59:06 DEBUG UserJDBC:28 - Executed queryINSERT_TO_USER_ACCOUNT_TABLE
+2019-08-27 15:59:06 ERROR UserJDBC:37 - SQLException occurred in UserAccJDBC.class from create() method
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at project.DAO.implementations.UserAccJDBC.create(UserAccJDBC.java:35)
+	at project.DAO.implementations.UserAccJDBC.create(UserAccJDBC.java:16)
+	at project.service.UserService.createUserAccInDatabase(UserService.java:52)
+	at project.servlets.RegistrationServlet.doPost(RegistrationServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:749)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:487)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:412)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:339)
+	at project.servlets.filters.LoginFilter.doFilter(LoginFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2019-08-27 15:59:06 INFO  RegistrationServlet:45 - Create new contact details in DB
+2019-08-27 15:59:06 DEBUG UserJDBC:29 - Executed queryINSERT_TO_CONTACT_DETAILS_TABLE
+2019-08-27 15:59:06 ERROR UserJDBC:39 - SQLException occurred in ContactDetailsJDBC.class from create() method
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at project.DAO.implementations.ContactDetailsJDBC.create(ContactDetailsJDBC.java:37)
+	at project.DAO.implementations.ContactDetailsJDBC.create(ContactDetailsJDBC.java:16)
+	at project.service.UserService.createContactDetailsInDatabase(UserService.java:57)
+	at project.servlets.RegistrationServlet.doPost(RegistrationServlet.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:749)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:487)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:412)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:339)
+	at project.servlets.filters.LoginFilter.doFilter(LoginFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2019-08-27 15:59:06 INFO  RegistrationServlet:58 - Registration Successful, return to SignIn page
+2019-08-27 15:59:06 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:06 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:59:06 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:59:06 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:59:09 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:09 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:59:09 INFO  SignInServlet:40 - SignInServlet call doPost() method
+2019-08-27 15:59:09 DEBUG UserJDBC:32 - Executed queryREAD_BY_MAIL
+2019-08-27 15:59:09 DEBUG UserJDBC:34 - Check is ResultSet has next
+2019-08-27 15:59:09 INFO  SignInServlet:50 - User exist, check password
+2019-08-27 15:59:09 DEBUG UserJDBC:70 - Executed queryREAD_BY_MAIL_AND_PASS
+2019-08-27 15:59:09 DEBUG UserJDBC:72 - Check is ResultSet has next
+2019-08-27 15:59:09 INFO  SignInServlet:57 - Password correct
+2019-08-27 15:59:09 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:09 INFO  LoginFilter:52 - Servlet path /client
+2019-08-27 15:59:09 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:09 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:09 INFO  ClientServlet:20 - ClientServlet call doGet() method
+2019-08-27 15:59:09 INFO  ClientServlet:25 - Create UserAccount and ContactDetails objects from DB
+2019-08-27 15:59:09 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-27 15:59:09 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-27 15:59:09 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-27 15:59:09 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-27 15:59:09 INFO  ClientServlet:29 - Set session attributes and get client page
+2019-08-27 15:59:13 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:13 INFO  LoginFilter:52 - Servlet path /operationsHistory
+2019-08-27 15:59:13 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:13 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:13 INFO  OperationsHistoryServlet:18 - OperationsHistoryServlet call doGet() method
+2019-08-27 15:59:13 INFO  OperationService:44 - get all operations replenushment main acc history from DB
+2019-08-27 15:59:13 DEBUG OpReplenishmentJDBC:34 - Executed queryGET_ALL_BY_ID
+2019-08-27 15:59:13 INFO  OperationService:50 - get all operations transfer history from DB
+2019-08-27 15:59:13 DEBUG OpTransferJDBC:35 - Executed queryGET_ALL_BY_ID
+2019-08-27 15:59:13 INFO  OperationService:56 - get all operations bill payment main acc history from DB
+2019-08-27 15:59:13 DEBUG OpBillPaymentJDBC:31 - Executed queryGET_ALL_BY_ID
+2019-08-27 15:59:29 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:29 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:59:29 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:29 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:29 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:59:29 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:59:29 INFO  SignInServlet:32 - Permission checked, go to /client page
+2019-08-27 15:59:29 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:29 INFO  LoginFilter:52 - Servlet path /client
+2019-08-27 15:59:29 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:29 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:29 INFO  ClientServlet:20 - ClientServlet call doGet() method
+2019-08-27 15:59:29 INFO  ClientServlet:25 - Create UserAccount and ContactDetails objects from DB
+2019-08-27 15:59:29 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-27 15:59:29 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-27 15:59:29 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-27 15:59:29 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-27 15:59:29 INFO  ClientServlet:29 - Set session attributes and get client page
+2019-08-27 15:59:30 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:30 INFO  LoginFilter:52 - Servlet path /open_deposit
+2019-08-27 15:59:30 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:30 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:30 INFO  DepositServlet:21 - DepositServlet call doGet() method
+2019-08-27 15:59:30 INFO  DepositServlet:35 - Deposit account not exist, go to Open Deposit page
+2019-08-27 15:59:35 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:35 INFO  LoginFilter:52 - Servlet path /open_deposit
+2019-08-27 15:59:35 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:35 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:35 INFO  DepositServlet:21 - DepositServlet call doGet() method
+2019-08-27 15:59:35 INFO  DepositServlet:35 - Deposit account not exist, go to Open Deposit page
+2019-08-27 15:59:42 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:42 INFO  LoginFilter:52 - Servlet path /open_credit
+2019-08-27 15:59:42 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:42 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:42 INFO  CreditServlet:22 - CreditServlet call doGet() method
+2019-08-27 15:59:42 INFO  CreditServlet:37 - Credit account not exist, check credit request
+2019-08-27 15:59:42 INFO  CreditProofService:21 - get Credit Request from DB
+2019-08-27 15:59:42 DEBUG OpCreditProofJDBC:77 - Executed queryREAD_BY_ID
+2019-08-27 15:59:43 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:43 INFO  LoginFilter:52 - Servlet path /operations
+2019-08-27 15:59:43 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:43 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:43 INFO  OperationsServlet:18 - OperationsServlet call doGet() method
+2019-08-27 15:59:57 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:57 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 15:59:57 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:57 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:57 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 15:59:57 INFO  SignInServlet:26 - Check session and permission
+2019-08-27 15:59:57 INFO  SignInServlet:32 - Permission checked, go to /client page
+2019-08-27 15:59:57 INFO  LoginFilter:51 - Check session
+2019-08-27 15:59:57 INFO  LoginFilter:52 - Servlet path /client
+2019-08-27 15:59:57 INFO  LoginFilter:55 - User is logined
+2019-08-27 15:59:57 INFO  LoginFilter:58 - Role - Client, go to client's page
+2019-08-27 15:59:57 INFO  ClientServlet:20 - ClientServlet call doGet() method
+2019-08-27 15:59:57 INFO  ClientServlet:25 - Create UserAccount and ContactDetails objects from DB
+2019-08-27 15:59:57 DEBUG UserJDBC:50 - Executed queryREAD_BY_ID
+2019-08-27 15:59:57 DEBUG UserJDBC:52 - Check is ResultSet has next
+2019-08-27 15:59:57 DEBUG UserJDBC:53 - Executed queryREAD_BY_ID
+2019-08-27 15:59:57 DEBUG UserJDBC:55 - Check is ResultSet has next
+2019-08-27 15:59:57 INFO  ClientServlet:29 - Set session attributes and get client page
+2019-08-27 16:00:00 INFO  LoginFilter:51 - Check session
+2019-08-27 16:00:00 INFO  LoginFilter:52 - Servlet path /logout
+2019-08-27 16:00:00 INFO  LogoutServlet:18 - LogoutServlet call doGet() method
+2019-08-27 16:00:02 INFO  LoginFilter:51 - Check session
+2019-08-27 16:00:02 INFO  LoginFilter:52 - Servlet path /signIn
+2019-08-27 16:00:02 INFO  SignInServlet:23 - SignInServlet call doGet() method
+2019-08-27 16:00:02 INFO  SignInServlet:26 - Check session and permission
